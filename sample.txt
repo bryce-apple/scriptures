@@ -1,0 +1,418 @@
+		% % ---
+		% \paragraph{Abraham 5:0} % *ABRAHAM-5-0 
+		% % ---
+			% \label{ABRAHAM-5-0}
+
+			% \phantom{.}
+			% % \begin{framed}
+			% % \scriptsize
+				% % \begin{compactdesc}
+					% % \item[X] 
+					% % \item[XX] 
+					% % \item[XXX] 
+					% % \item[XXXX] 
+					% % \item[XXXXX] 
+					% % \item[XXXXXX] 
+					% % \item[XXXXXXX] 
+					% % \item[XXXXXXXX] 
+				% % \end{compactdesc}
+			% % \end{framed}
+		% % ---
+		% \paragraph{Abraham 5:1} % *ABRAHAM-5-1 
+		% % ---
+			% \label{ABRAHAM-5-1}
+
+			% \phantom{.}
+			% % \begin{framed}
+			% % \scriptsize
+				% % \begin{compactdesc}
+					% % \item[X] 
+					% % \item[XX] 
+					% % \item[XXX] 
+					% % \item[XXXX] 
+					% % \item[XXXXX] 
+					% % \item[XXXXXX] 
+					% % \item[XXXXXXX] 
+					% % \item[XXXXXXXX] 
+				% % \end{compactdesc}
+			% % \end{framed}
+		% % ---
+		% \paragraph{Abraham 5:2} % *ABRAHAM-5-2 
+		% % ---
+			% \label{ABRAHAM-5-2}
+
+			% \phantom{.}
+			% % \begin{framed}
+			% % \scriptsize
+				% % \begin{compactdesc}
+					% % \item[X] 
+					% % \item[XX] 
+					% % \item[XXX] 
+					% % \item[XXXX] 
+					% % \item[XXXXX] 
+					% % \item[XXXXXX] 
+					% % \item[XXXXXXX] 
+					% % \item[XXXXXXXX] 
+				% % \end{compactdesc}
+			% % \end{framed}
+		% % ---
+		% \paragraph{Abraham 5:3} % *ABRAHAM-5-3 
+		% % ---
+			% \label{ABRAHAM-5-3}
+
+			% \phantom{.}
+			% % \begin{framed}
+			% % \scriptsize
+				% % \begin{compactdesc}
+					% % \item[X] 
+					% % \item[XX] 
+					% % \item[XXX] 
+					% % \item[XXXX] 
+					% % \item[XXXXX] 
+					% % \item[XXXXXX] 
+					% % \item[XXXXXXX] 
+					% % \item[XXXXXXXX] 
+				% % \end{compactdesc}
+			% % \end{framed}
+		% % ---
+		% \paragraph{Abraham 5:4} % *ABRAHAM-5-4 
+		% % ---
+			% \label{ABRAHAM-5-4}
+
+			% \phantom{.}
+			% % \begin{framed}
+			% % \scriptsize
+				% % \begin{compactdesc}
+					% % \item[X] 
+					% % \item[XX] 
+					% % \item[XXX] 
+					% % \item[XXXX] 
+					% % \item[XXXXX] 
+					% % \item[XXXXXX] 
+					% % \item[XXXXXXX] 
+					% % \item[XXXXXXXX] 
+				% % \end{compactdesc}
+			% % \end{framed}
+		% % ---
+		% \paragraph{Abraham 5:5} % *ABRAHAM-5-5 
+		% % ---
+			% \label{ABRAHAM-5-5}
+
+			% \phantom{.}
+			% % \begin{framed}
+			% % \scriptsize
+				% % \begin{compactdesc}
+					% % \item[X] 
+					% % \item[XX] 
+					% % \item[XXX] 
+					% % \item[XXXX] 
+					% % \item[XXXXX] 
+					% % \item[XXXXXX] 
+					% % \item[XXXXXXX] 
+					% % \item[XXXXXXXX] 
+				% % \end{compactdesc}
+			% % \end{framed}
+		% % ---
+		% \paragraph{Abraham 5:6} % *ABRAHAM-5-6 
+		% % ---
+			% \label{ABRAHAM-5-6}
+
+			% \phantom{.}
+			% % \begin{framed}
+			% % \scriptsize
+				% % \begin{compactdesc}
+					% % \item[X] 
+					% % \item[XX] 
+					% % \item[XXX] 
+					% % \item[XXXX] 
+					% % \item[XXXXX] 
+					% % \item[XXXXXX] 
+					% % \item[XXXXXXX] 
+					% % \item[XXXXXXXX] 
+				% % \end{compactdesc}
+			% % \end{framed}
+		% % ---
+		% \paragraph{Abraham 5:7} % *ABRAHAM-5-7 
+		% % ---
+			% \label{ABRAHAM-5-7}
+
+			% \phantom{.}
+			% % \begin{framed}
+			% % \scriptsize
+				% % \begin{compactdesc}
+					% % \item[X] 
+					% % \item[XX] 
+					% % \item[XXX] 
+					% % \item[XXXX] 
+					% % \item[XXXXX] 
+					% % \item[XXXXXX] 
+					% % \item[XXXXXXX] 
+					% % \item[XXXXXXXX] 
+				% % \end{compactdesc}
+			% % \end{framed}
+		% % ---
+		% \paragraph{Abraham 5:8} % *ABRAHAM-5-8 
+		% % ---
+			% \label{ABRAHAM-5-8}
+
+			% \phantom{.}
+			% % \begin{framed}
+			% % \scriptsize
+				% % \begin{compactdesc}
+					% % \item[X] 
+					% % \item[XX] 
+					% % \item[XXX] 
+					% % \item[XXXX] 
+					% % \item[XXXXX] 
+					% % \item[XXXXXX] 
+					% % \item[XXXXXXX] 
+					% % \item[XXXXXXXX] 
+				% % \end{compactdesc}
+			% % \end{framed}
+		% % ---
+		% \paragraph{Abraham 5:9} % *ABRAHAM-5-9 
+		% % ---
+			% \label{ABRAHAM-5-9}
+
+			% \phantom{.}
+			% % \begin{framed}
+			% % \scriptsize
+				% % \begin{compactdesc}
+					% % \item[X] 
+					% % \item[XX] 
+					% % \item[XXX] 
+					% % \item[XXXX] 
+					% % \item[XXXXX] 
+					% % \item[XXXXXX] 
+					% % \item[XXXXXXX] 
+					% % \item[XXXXXXXX] 
+				% % \end{compactdesc}
+			% % \end{framed}
+		% % ---
+		% \paragraph{Abraham 5:10} % *ABRAHAM-5-10 
+		% % ---
+			% \label{ABRAHAM-5-10}
+
+			% \phantom{.}
+			% % \begin{framed}
+			% % \scriptsize
+				% % \begin{compactdesc}
+					% % \item[X] 
+					% % \item[XX] 
+					% % \item[XXX] 
+					% % \item[XXXX] 
+					% % \item[XXXXX] 
+					% % \item[XXXXXX] 
+					% % \item[XXXXXXX] 
+					% % \item[XXXXXXXX] 
+				% % \end{compactdesc}
+			% % \end{framed}
+		% % ---
+		% \paragraph{Abraham 5:11} % *ABRAHAM-5-11 
+		% % ---
+			% \label{ABRAHAM-5-11}
+
+			% \phantom{.}
+			% % \begin{framed}
+			% % \scriptsize
+				% % \begin{compactdesc}
+					% % \item[X] 
+					% % \item[XX] 
+					% % \item[XXX] 
+					% % \item[XXXX] 
+					% % \item[XXXXX] 
+					% % \item[XXXXXX] 
+					% % \item[XXXXXXX] 
+					% % \item[XXXXXXXX] 
+				% % \end{compactdesc}
+			% % \end{framed}
+		% % ---
+		% \paragraph{Abraham 5:12} % *ABRAHAM-5-12 
+		% % ---
+			% \label{ABRAHAM-5-12}
+
+			% \phantom{.}
+			% % \begin{framed}
+			% % \scriptsize
+				% % \begin{compactdesc}
+					% % \item[X] 
+					% % \item[XX] 
+					% % \item[XXX] 
+					% % \item[XXXX] 
+					% % \item[XXXXX] 
+					% % \item[XXXXXX] 
+					% % \item[XXXXXXX] 
+					% % \item[XXXXXXXX] 
+				% % \end{compactdesc}
+			% % \end{framed}
+		% % ---
+		% \paragraph{Abraham 5:13} % *ABRAHAM-5-13 
+		% % ---
+			% \label{ABRAHAM-5-13}
+
+			% \phantom{.}
+			% % \begin{framed}
+			% % \scriptsize
+				% % \begin{compactdesc}
+					% % \item[X] 
+					% % \item[XX] 
+					% % \item[XXX] 
+					% % \item[XXXX] 
+					% % \item[XXXXX] 
+					% % \item[XXXXXX] 
+					% % \item[XXXXXXX] 
+					% % \item[XXXXXXXX] 
+				% % \end{compactdesc}
+			% % \end{framed}
+		% % ---
+		% \paragraph{Abraham 5:14} % *ABRAHAM-5-14 
+		% % ---
+			% \label{ABRAHAM-5-14}
+
+			% \phantom{.}
+			% % \begin{framed}
+			% % \scriptsize
+				% % \begin{compactdesc}
+					% % \item[X] 
+					% % \item[XX] 
+					% % \item[XXX] 
+					% % \item[XXXX] 
+					% % \item[XXXXX] 
+					% % \item[XXXXXX] 
+					% % \item[XXXXXXX] 
+					% % \item[XXXXXXXX] 
+				% % \end{compactdesc}
+			% % \end{framed}
+		% % ---
+		% \paragraph{Abraham 5:15} % *ABRAHAM-5-15 
+		% % ---
+			% \label{ABRAHAM-5-15}
+
+			% \phantom{.}
+			% % \begin{framed}
+			% % \scriptsize
+				% % \begin{compactdesc}
+					% % \item[X] 
+					% % \item[XX] 
+					% % \item[XXX] 
+					% % \item[XXXX] 
+					% % \item[XXXXX] 
+					% % \item[XXXXXX] 
+					% % \item[XXXXXXX] 
+					% % \item[XXXXXXXX] 
+				% % \end{compactdesc}
+			% % \end{framed}
+		% % ---
+		% \paragraph{Abraham 5:16} % *ABRAHAM-5-16 
+		% % ---
+			% \label{ABRAHAM-5-16}
+
+			% \phantom{.}
+			% % \begin{framed}
+			% % \scriptsize
+				% % \begin{compactdesc}
+					% % \item[X] 
+					% % \item[XX] 
+					% % \item[XXX] 
+					% % \item[XXXX] 
+					% % \item[XXXXX] 
+					% % \item[XXXXXX] 
+					% % \item[XXXXXXX] 
+					% % \item[XXXXXXXX] 
+				% % \end{compactdesc}
+			% % \end{framed}
+		% % ---
+		% \paragraph{Abraham 5:17} % *ABRAHAM-5-17 
+		% % ---
+			% \label{ABRAHAM-5-17}
+
+			% \phantom{.}
+			% % \begin{framed}
+			% % \scriptsize
+				% % \begin{compactdesc}
+					% % \item[X] 
+					% % \item[XX] 
+					% % \item[XXX] 
+					% % \item[XXXX] 
+					% % \item[XXXXX] 
+					% % \item[XXXXXX] 
+					% % \item[XXXXXXX] 
+					% % \item[XXXXXXXX] 
+				% % \end{compactdesc}
+			% % \end{framed}
+		% % ---
+		% \paragraph{Abraham 5:18} % *ABRAHAM-5-18 
+		% % ---
+			% \label{ABRAHAM-5-18}
+
+			% \phantom{.}
+			% % \begin{framed}
+			% % \scriptsize
+				% % \begin{compactdesc}
+					% % \item[X] 
+					% % \item[XX] 
+					% % \item[XXX] 
+					% % \item[XXXX] 
+					% % \item[XXXXX] 
+					% % \item[XXXXXX] 
+					% % \item[XXXXXXX] 
+					% % \item[XXXXXXXX] 
+				% % \end{compactdesc}
+			% % \end{framed}
+		% % ---
+		% \paragraph{Abraham 5:19} % *ABRAHAM-5-19 
+		% % ---
+			% \label{ABRAHAM-5-19}
+
+			% \phantom{.}
+			% % \begin{framed}
+			% % \scriptsize
+				% % \begin{compactdesc}
+					% % \item[X] 
+					% % \item[XX] 
+					% % \item[XXX] 
+					% % \item[XXXX] 
+					% % \item[XXXXX] 
+					% % \item[XXXXXX] 
+					% % \item[XXXXXXX] 
+					% % \item[XXXXXXXX] 
+				% % \end{compactdesc}
+			% % \end{framed}
+		% % ---
+		% \paragraph{Abraham 5:20} % *ABRAHAM-5-20 
+		% % ---
+			% \label{ABRAHAM-5-20}
+
+			% \phantom{.}
+			% % \begin{framed}
+			% % \scriptsize
+				% % \begin{compactdesc}
+					% % \item[X] 
+					% % \item[XX] 
+					% % \item[XXX] 
+					% % \item[XXXX] 
+					% % \item[XXXXX] 
+					% % \item[XXXXXX] 
+					% % \item[XXXXXXX] 
+					% % \item[XXXXXXXX] 
+				% % \end{compactdesc}
+			% % \end{framed}
+		% % ---
+		% \paragraph{Abraham 5:21} % *ABRAHAM-5-21 
+		% % ---
+			% \label{ABRAHAM-5-21}
+
+			% \phantom{.}
+			% % \begin{framed}
+			% % \scriptsize
+				% % \begin{compactdesc}
+					% % \item[X] 
+					% % \item[XX] 
+					% % \item[XXX] 
+					% % \item[XXXX] 
+					% % \item[XXXXX] 
+					% % \item[XXXXXX] 
+					% % \item[XXXXXXX] 
+					% % \item[XXXXXXXX] 
+				% % \end{compactdesc}
+			% % \end{framed}

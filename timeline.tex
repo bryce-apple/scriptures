@@ -1,0 +1,193 @@
+% --- Define solid colors for each tag (BACK and FRAME) ---
+% (Tweak RGBs to taste; no "!" used anywhere.)
+% ==== REVELATION & SCRIPTURE (Purples & Blues) ====
+\definecolor{TagDoctrineBack}{RGB}{238,233,250}
+\definecolor{TagDoctrineFrame}{RGB}{102,51,153}     % Medium purple
+
+\definecolor{TagScriptureBack}{RGB}{230,240,255}
+\definecolor{TagScriptureFrame}{RGB}{30,90,170}     % Deep blue
+
+\definecolor{TagTranslationBack}{RGB}{230,245,255}
+\definecolor{TagTranslationFrame}{RGB}{0,105,148}   % Sky/teal blue
+
+\definecolor{TagRevelationBack}{RGB}{240,232,250}
+\definecolor{TagRevelationFrame}{RGB}{128,0,128}    % Royal purple
+
+\definecolor{TagPriesthoodBack}{RGB}{228,244,233}
+\definecolor{TagPriesthoodFrame}{RGB}{34,139,34}   % ForestGreen
+
+\definecolor{TagBaptismForTheDeadBack}{RGB}{228,244,233}  % Light mint green
+\definecolor{TagBaptismForTheDeadFrame}{RGB}{50,168,121}  % Jungle green
+
+% ==== COMMUNICATION & LEARNING (Golds & Oranges) ====
+\definecolor{TagEducationBack}{RGB}{255,250,220}
+\definecolor{TagEducationFrame}{RGB}{218,165,32}    % Goldenrod
+
+\definecolor{TagPublishingBack}{RGB}{255,244,230}
+\definecolor{TagPublishingFrame}{RGB}{199,98,19}    % Burnt orange
+
+
+% ==== MOVEMENT & EXPANSION (Teal & Turquoise) ====
+\definecolor{TagTravelBack}{RGB}{230,247,240}
+\definecolor{TagTravelFrame}{RGB}{0,128,128}        % Teal
+
+\definecolor{TagMigrationBack}{RGB}{228,244,250}
+\definecolor{TagMigrationFrame}{RGB}{0,123,167}     % Cyan blue
+
+
+% ==== INSTITUTIONS & ORDER (Greens) ====
+\definecolor{TagOrganizationBack}{RGB}{235,250,235}
+\definecolor{TagOrganizationFrame}{RGB}{34,139,34}  % Forest green
+
+\definecolor{TagLawBack}{RGB}{236,242,236}
+\definecolor{TagLawFrame}{RGB}{85,107,47}           % Olive green
+
+\definecolor{TagMasonryBack}{RGB}{250,242,230}   % Light stone/parchment
+\definecolor{TagMasonryFrame}{RGB}{101,67,33}    % Dark leather brown
+
+% ==== CONFLICT & LIFE EXPERIENCE (Reds & Rose) ====
+\definecolor{TagPersecutionBack}{RGB}{255,236,236}
+\definecolor{TagPersecutionFrame}{RGB}{178,34,34}   % Firebrick red
+
+\definecolor{TagLifeBack}{RGB}{252,235,240}
+\definecolor{TagLifeFrame}{RGB}{199,21,133}         % Medium violet-red
+
+% ==== TEMPLE (sacred / architectural — calm violet) ====
+\definecolor{TagTempleBack}{RGB}{245,238,255}
+\definecolor{TagTempleFrame}{RGB}{120,81,169}   % Medium purple
+
+% ==== POLYGAMY (social / controversial — muted red-brown) ====
+\definecolor{TagPolygamyBack}{RGB}{245,225,220}   % Muted dusty pink
+\definecolor{TagPolygamyFrame}{RGB}{139,69,19}    % Saddle Brown / Muted Brick
+
+% ==== PROPHECY (divine foresight — bright violet-blue) ====
+\definecolor{TagProphecyBack}{RGB}{230,230,255}   % Lavender mist
+\definecolor{TagProphecyFrame}{RGB}{75,0,130}     % Indigo
+
+% ==== FINANCE (economic / stewardship — olive-gold green) ====
+\definecolor{TagFinanceBack}{RGB}{235,250,240}    % Light mint/cash
+\definecolor{TagFinanceFrame}{RGB}{46,139,87}     % Sea Green
+
+% ==== DEATH (finality / legacy — cool slate gray) ====
+\definecolor{TagDeathBack}{RGB}{240,240,240}
+\definecolor{TagDeathFrame}{RGB}{112,128,144}     % SlateGray
+
+\definecolor{TagFamilyBack}{RGB}{255,240,230}     % Pale peach
+\definecolor{TagFamilyFrame}{RGB}{205,92,92}      % Indian Red / Salmon
+
+% Timeline entry box (we keep the left spine black to avoid any color parsing)
+\tcbset{
+  timeline/.style={
+    enhanced, breakable,
+    colback=white, colframe=black,
+    left=4mm, right=2mm, top=1.5mm, bottom=1.5mm,
+    boxsep=1mm, arc=1mm,
+    borderline west={1.2pt}{0pt}{black},
+    before skip=3mm, after skip=3mm
+  }
+}
+
+% Chip without mixing: takes explicit BACK and FRAME color names
+\newcommand{\TagChipBF}[3]{%
+  \begingroup
+  \setlength{\fboxsep}{.5mm}%
+  \fcolorbox{#2}{#1}{{\timelinefontsize\textsf{*#3}}}%
+  \endgroup
+}
+
+% Map tag name -> (BACK, FRAME, LABEL)
+\newcommand{\ChipForTag}[1]{%
+  \IfStrEqCase{#1}{%
+    {doctrine}{\TagChipBF{TagDoctrineBack}{TagDoctrineFrame}{DOCTRINE}}%
+    {scripture}{\TagChipBF{TagScriptureBack}{TagScriptureFrame}{SCRIPTURE}}%
+    {translation}{\TagChipBF{TagTranslationBack}{TagTranslationFrame}{TRANSLATION}}%
+    {revelation}{\TagChipBF{TagRevelationBack}{TagRevelationFrame}{REVELATION}}%
+    {education}{\TagChipBF{TagEducationBack}{TagEducationFrame}{EDUCATION}}%
+    {publishing}{\TagChipBF{TagPublishingBack}{TagPublishingFrame}{PUBLISHING}}%
+    {travel}{\TagChipBF{TagTravelBack}{TagTravelFrame}{TRAVEL}}%
+    {migration}{\TagChipBF{TagMigrationBack}{TagMigrationFrame}{MIGRATION}}%
+    {organization}{\TagChipBF{TagOrganizationBack}{TagOrganizationFrame}{ORGANIZATION}}%
+    {law}{\TagChipBF{TagLawBack}{TagLawFrame}{LAW}}%
+    {persecution}{\TagChipBF{TagPersecutionBack}{TagPersecutionFrame}{PERSECUTION}}%
+    {life}{\TagChipBF{TagLifeBack}{TagLifeFrame}{LIFE}}%
+	{temple}{\TagChipBF{TagTempleBack}{TagTempleFrame}{TEMPLE}}%
+	{polygamy}{\TagChipBF{TagPolygamyBack}{TagPolygamyFrame}{POLYGAMY}}%
+	{priesthood}{\TagChipBF{TagPriesthoodBack}{TagPriesthoodFrame}{PRIESTHOOD}}%
+	{prophecy}{\TagChipBF{TagProphecyBack}{TagProphecyFrame}{PROPHECY}}%
+	{finance}{\TagChipBF{TagFinanceBack}{TagFinanceFrame}{FINANCE}}%
+	{death}{\TagChipBF{TagDeathBack}{TagDeathFrame}{DEATH}}%
+	{family}{\TagChipBF{TagFamilyBack}{TagFamilyFrame}{FAMILY}}%
+	{masonry}{\TagChipBF{TagMasonryBack}{TagMasonryFrame}{MASONRY}}%
+	{baptismforthedead}{\TagChipBF{TagBaptismForTheDeadBack}{TagBaptismForTheDeadFrame}{BAPTISMFORTHEDEAD}}%
+  }[\TagChipBF{gray!10}{gray!70}{\textsc{#1}}]%
+}
+
+\newcommand{\doTag}[1]{\ChipForTag{#1}\hspace{0.3em}}
+\NewDocumentCommand{\Tags}{m}{\forcsvlist{\doTag}{#1}}
+
+% Entry macro: #1 date, #2 title, [#3 tags], +#4 body
+\newcommand{\timelinefontsize}{\scriptsize} % or \footnotesize for smaller
+% #1 = date (YYYY-MM-DD)
+% #2 = title
+% [#3] = tags (comma-separated)
+% [#4] = location (optional)
+% +#5 = body text
+\NewDocumentCommand{\TimelineEntry}{ m m O{} O{} O{} +m }{%
+  % Arguments:
+  % #1 = date (YYYY-MM-DD)
+  % #2 = title
+  % [#3] = tags (optional)
+  % [#4] = location (optional)
+  % [#5] = sources (optional)
+  % +#6 = body text
+  \begin{tcolorbox}[timeline]
+    {\timelinefontsize
+    % --- Date and title ---
+    \textbf{\DTMdate{#1}}\hspace{0.3em}\textbf{#2}\par
+
+    % --- Optional location ---
+    \ifstrempty{#4}{}{%
+      \vspace{0.3mm}\textit{#4}\par
+    }
+
+    % --- Optional tags ---
+    \ifstrempty{#3}{}{%
+      \vspace{0.5mm}\Tags{#3}\par
+    }
+
+    % --- Body text ---
+    #6
+
+    % --- Optional sources ---
+    \ifstrempty{#5}{}{%
+      \vspace{0.8mm}%
+      {\textsc{\textbf{Sources:}} #5\par}%
+    }
+    }
+  \end{tcolorbox}
+}
+
+\newcommand{\TimelineLegend}{%
+  \noindent
+	\ChipForTag{baptismforthedead}\,
+	\ChipForTag{death}\,
+	\ChipForTag{doctrine}\,
+	\ChipForTag{education}\,
+	\ChipForTag{family}\,
+	\ChipForTag{finance}\,
+	\ChipForTag{law}\,
+	\ChipForTag{life}\,
+	\ChipForTag{masonry}\,
+	\ChipForTag{migration}\,
+	\ChipForTag{organization}\,
+	\ChipForTag{persecution}\,
+	\ChipForTag{polygamy}\,
+	\ChipForTag{priesthood}\,
+	\ChipForTag{prophecy}\,
+	\ChipForTag{publishing}\,
+	\ChipForTag{revelation}\,
+	\ChipForTag{scripture}\,
+	\ChipForTag{temple}\,
+	\ChipForTag{translation}\,
+	\ChipForTag{travel}\par
+}

@@ -1,0 +1,462 @@
+% ----------------------------------------------------------- 
+% ----------------------------------------------------------- 
+% BASIC DOCUMENT SETUP
+% -----------------------------------------------------------
+% -----------------------------------------------------------
+
+\documentclass[10pt]{article} % Font size (can be 10pt, 11pt or 12pt) and paper size (remove a4paper for US letter paper)
+\usepackage[margin=1.0in]{geometry} % used to change the margins. Set the margin to whatever you want.
+\usepackage[protrusion=true,expansion=true]{microtype} % Better typography
+\usepackage{multicol}
+\usepackage{paralist}
+\usepackage[normalem]{ulem} % underline, double underline
+\usepackage{mathpazo} % Use the Palatino font
+\usepackage[T1]{fontenc} % Required for accented characters
+\linespread{1.05} % Change line spacing here, Palatino benefits from a slight increase by default
+
+% -----------------------------------------------------------
+% ----------------------------------------------------------- 
+% LANGUAGE PACKAGES
+% -----------------------------------------------------------
+% -----------------------------------------------------------
+
+\usepackage{phonetic} % gets schwa for transliteration. Command is \schwa.
+\usepackage[utf8]{inputenc} % Needed for Greek.
+\usepackage[greek, english]{babel} % this gets Greek.
+	\newcommand{\gr}[1]{\textgreek{#1}}
+\usepackage{coptic} % For Coptic.
+\usepackage{cjhebrew} % For Hebrew.
+	\newcommand{\he}[1]{\<#1>}
+\usepackage{serto} % For Syriac.
+\usepackage{semtrans} % For \Alif and \Ayn transliterations.
+\usepackage{color} % white, black, red, green, blue, cyan, magenta, yellow
+\usepackage{pifont} % symbols
+
+% -----------------------------------------------------------
+% ----------------------------------------------------------- 
+% TITLESEC AND CONFIGURATIONS (for styling all sections)
+% -----------------------------------------------------------
+% -----------------------------------------------------------
+
+\usepackage[compact]{titlesec} % Compactifies the sections to take up less space with the [compact] option
+
+\titleformat{\section}
+  {\pagebreak{}\normalfont\LARGE\bfseries\filcenter}   	% The style of the section title
+  {}                             			% a prefix
+  {0pt}                          			% How much space exists between the prefix and the title
+  {\this% -----tyle{noHeader}}    									% How the section is represented
+  
+% \newcommand{\sectionbreak}{\clearpage} 
+  
+\titleformat{\subsection}
+  {\normalfont\Large\bfseries}   	% The style of the section title
+  {}                             			% a prefix
+  {4pt}                          			% How much space exists between the prefix and the title
+  {}    									% How the section is represented
+  
+\titleformat{\subsubsection}
+  {\normalfont\large\bfseries\itshape}   	% The style of the section title
+  {}                             			% a prefix
+  {8pt}                          			% How much space exists between the prefix and the title
+  {}    									% How the section is represented
+
+\newenvironment{tightcenter}{% This is a new environment for including the section numbers within the text, forcing the line spacing to stay the same and centering them.
+  \setlength\topsep{4pt}
+  \setlength\parskip{0pt}
+  \begin{center}
+}{%
+  \end{center}
+}
+
+% -----------------------------------------------------------
+% ----------------------------------------------------------- 
+% TITLETOC AND CONFIGURATIONS (for styling table of contents)
+% -----------------------------------------------------------
+% -----------------------------------------------------------
+
+\usepackage{titletoc}
+
+\titlecontents{section}[0em] % the [] value is an indent from the left
+{\vskip 2ex}% the distance separating the section line in the TOC from what is above it
+{\large\bfseries}% the styling for sections that are numbered
+{}% the styling for sections that are not numbered
+{\titlerule*{}\contentspage}% text which immediately follows the section title *on the same line* in the TOC
+	% \contentspage gives you the page number of the section
+	% \titlerule*{} creates a string of whatever character is in the {}, and goes all the way to the right side of the page. Left blank here.
+	
+\titlecontents{subsection}[1em] % the [] value is an indent from the left
+{\vskip 1ex}% the distance separating the section line in the TOC from what is above it
+{}% the styling for sections that are numbered
+{}% the styling for sections that are not numbered
+{\titlerule*[0.8pc]{.}\contentspage}% text which immediately follows the section title *on the same line* in the TOC
+	% \contentspage gives you the page number of the section
+	% \titlerule*{} creates a string of whatever character is in the {}, and goes all the way to the right side of the page.
+	
+\titlecontents{subsubsection}[2em] % the [] value is an indent from the left
+{}% the distance separating the section line in the TOC from what is above it
+{\itshape}% the styling for sections that are numbered
+{}% the styling for sections that are not numbered
+{\titlerule*[0.8pc]{.}\contentspage}% text which immediately follows the section title *on the same line* in the TOC
+	% \contentspage gives you the page number of the section
+	% \titlerule*{} creates a string of whatever character is in the {}, and goes all the way to the right side of the page.
+
+% -----------------------------------------------------------
+% ----------------------------------------------------------- 
+% FANCYHDR AND CONFIGURATIONS (for headers and footers)
+% -----------------------------------------------------------
+% -----------------------------------------------------------
+
+\usepackage{fancyhdr}
+\% -----tyle{fancy}
+% \renewcommand{\subsectionmark}[1]{%
+ % \markboth{#1}{}}
+\renewcommand{\subsectionmark}[1]{\markright{#1}} % adds the subsection to the header. If you want to add the subsubsection, just change both to subsubsection.
+% \renewcommand{\subsubsectionmark}[1]{\markleft{#1}} % adds the subsection to the header. If you want to add the subsubsection, just change both to subsubsection.
+% \let\Subsubsectionmark\subsubsectionmark
+% \def\subsubsectionmark#1{\def\Subsubsectionname{#1}\Subsubsectionmark{#1}}
+\fancyhead[R]{\nouppercase{\rightmark}} % sets the section name and number at the left in the header.
+\fancyhead[L]{\textsc{Gospel Notes}}
+% \fancyhead[R]{\thepage} % sets the subsection name and number at the right in the header.
+
+\fancy% -----tyle{noHeader}{% This and below creates a command that allows you
+	\fancyhead{}		  % to remove the header from the first page of each section.
+}
+
+% -----------------------------------------------------------
+% ----------------------------------------------------------- 
+% OTHER COMMANDS
+% -----------------------------------------------------------
+% -----------------------------------------------------------
+
+\newcommand{\location}[1]{\hspace{12pt}{\textsc{#1}}}
+\newcommand{\infos}[1]{\textsc{{\small #1}}}
+
+% -----------------------------------------------------------
+% ----------------------------------------------------------- 
+% HYPERREF (should usually go last in the preamble)
+% -----------------------------------------------------------
+% -----------------------------------------------------------
+
+\usepackage[hidelinks]{hyperref} % [hidelinks] eliminates boxes around links.
+\hypersetup{
+colorlinks=false, % set true if you want colored links
+linktoc=all, % set to all if you want both sections and subsections linked
+linkcolor=black, % choose some color if you want links to stand out
+}
+
+% -----------------------------------------------------------
+% ----------------------------------------------------------- 
+% TITLE INFORMATION
+% -----------------------------------------------------------
+% -----------------------------------------------------------
+
+\title{Gospel Notes}
+\date{\today}
+\author{me}
+
+\begin{document}
+
+\maketitle
+
+\tableofcontents
+
+	% \input{gospel_scriptures.tex}
+	% \input{gospel_temple.tex}
+	% \input{gospel_concepts.tex}
+	% \input{gospel_plan_of_salvation.tex}
+	% \input{gospel_meeting_notes.tex}
+
+\end{document}
+
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+
+\subsection{Letter to myself at mission's end}
+
+\subsubsection{Background}
+
+The date on this letter says ``with one week left.'' I don't remember writing it. I found it when I was going through my mission things at my parents' house in Vernal in the summer of 2014, before we moved to Durham.
+
+\subsubsection{The Letter}
+
+Hey. How's life at home? Remember the mission? Remember all the great feelings you had out here? All the changes you made? Well, this letter's purpose is to help you retain those changes, since if you don't retain them, they don't mean very much. Out here you had the resolve to change many things, and at home you make those changes part of real life, and now you are with your family, so you have many wonderful opportunities. Here follows a list of questions that you need to answer, that will help to retain those changes. Don't be selfish with your time, and don't make excuses---these things are important. You have the priesthood and you must exercise it. Don't make excuses. If the answer to any one of these questions is ``no,'' then you need to repent and do better.
+
+\begin{enumerate}
+
+\item Are you reading the scriptures \textit{every day}?
+
+\item Are you having repentant prayers at least twice per day?
+
+\item Are you fasting regularly and paying a generous offering?
+
+\item Are you paying your tithing before anything else?
+
+\item Are you obeying the law of chastity with a very high standard?
+
+\item Are you obeying the WOW, including controlling what you eat?
+
+\item Are you keeping the sabbath holy the \textit{new} way? TV, music, video games, etc.
+
+\item Are you obeying the laws of the land?
+
+\item Are you obeying pirating laws?
+
+\item Are you taking the sacrament every week, having done an inventory?
+
+\item Are you fulfilling and magnifying your calling?
+
+\item Are you volunteering to give service to others in church?
+
+\item Have you made visits this week? Do you have a day scheduled?
+
+\item Have you done your home teaching this month?
+
+\item Did you have FHE on Monday?
+
+\item Have you been out with the elders this week or do you have an appointment?
+
+\item Are you studying people in one way or another?
+
+\item Are you listening to worthy music, videos, and video games?
+
+\item Have you told your family you love them today?
+
+\item Have you done something nice for them today?
+
+\item Have you written to Cristopher and Mirzhi this week?
+
+\item Have you written to at least one other person in Chile this week?
+
+\item Are you doing things to find a wife? Have you done something special for her today?
+
+\item Are you writing in your journal every day?
+
+\item Are you carrying the book of people?
+
+\item Are you staying caught up with school work and work?
+
+\item Are you using time efficiently always?
+
+\item Are you waking up earlier than 8:30?
+
+\item Are you remembering the mission regularly?
+
+\item are you speaking with an educated vocabulary?
+
+\item Are you being mature?
+
+\item Is the atonement and its application through repentance and service to others the focus of your life?
+
+\item Are you still representing Jesus Christ?
+
+\end{enumerate}
+
+Remember the things from the mission. It meant everything. Remember Cristopher and Mirzhi. They mean everything. You \textit{must} stay in touch with them---you don't have the right to do anything else. They love you, and you love them. DO NOT LET FRIENDS AND OTHER THINGS GET IN THE WAY---THEY ARE EVERYTHING. Stay strong in the decisions you have made to change---like not going to concerts. It will be difficult but you need the Spirit to guide you in carrying out your duty as a priesthood holder. Don't be a youth; don't be immature. You only have one chance. Cristopher is going to live worthy of his goal of being an apostle---you need to as well. Live like one and live the gospel. It is the only purpose of life. You can be with them, and your family forever. Don't throw that away. ---Elder Bryce Scott Gessell
+
+\subsubsection{Commentary}
+
+\subsection{Bobpa's Testimony}
+
+\subsubsection*{Background}
+
+In late 2012, Tina sent her father's written testimony to all of her children and their spouses. His name is Robert Fletcher, but all of the grandkids call him Bobpa, and I call him that as well.
+
+His testimony was broken into paragraphs, and I have added the numbers to the paragraphs.
+
+\subsubsection*{The Testimony}
+
+\begin{enumerate}
+
+\item I am writing this not because I find fault with the way beliefs are stated by many members of the LDS church. It is primarily written for young people for whom the Internet is a way of life from which all points of view are freely expressed. As never before, information about the church is thrust in front of them for the purpose of demonstrating its falsehood. I would like to describe my own way of dealing with troublesome historical ``facts''. I will start by listing some of my key beliefs. They are not significantly different from those of most LDS members, even though my way of describing them is sometimes unconventional:
+
+\item I believe that each of us has a spirit as well as a body as manifested by our awareness and our ability to make decisions that are carried out by our body (free agency). (Scientists are striving to show that this awareness comes physically through the operation of the brain, so far unsuccessfully. Nevertheless, all the laws of a country are based on the assumption that we have free will.)
+
+\item Thus, I believe in the reality of spirit.
+
+\item It doesn't seem to be too much of a stretch to believe that our spirits existed independent of our bodies before we were born and will exist after our bodies die.
+
+\item I believe in God as the Supreme Being who has provided a plan for the possibility of giving us continuous and ultimate ``joy.''
+
+\item I believe in Jesus Christ as His Son who has implemented God's plan, and taught us His gospel.
+
+\item I believe in the Holy Ghost that influences our spirit.
+
+\item I believe that Joseph Smith was a prophet who was directed by God to form His church.
+
+\item I believe that true prophets are described in the Bible and the Book of Mormon who were inspired by the Holy Ghost.
+
+\item I believe that one of the main purposes for our mortal existence is to develop the ability to live a Christ-like life in the presence of mortal temptations to do otherwise, with no memory of our previous spiritual life and with little physical evidence of God or other spiritual beings to guide us, being left to be guided only by the Holy Ghost.
+
+\item I believe that our Spirit as developed by these choices will find an opportunity in the here-after uniquely suited to our mortal development thanks to the eternal plan of Jesus Christ (Atonement).
+
+\item Up to this point I think my above stated beliefs do not differ from, but of course do not include all, the beliefs of the LDS church. What follows is my own view of some of these beliefs. 
+
+\item I will not try to distinguish between the influences of various forms of divine spirit: the influence of the Holy Ghost, the Spirit of God, the Light of Christ, the Lord's spirit, etc., and I will refer to all as the influence of the Holy Ghost, which is His specific mission. I believe that all spiritual manifestations are aspects of that influence, including impressions, burning of one's bosom, words of guidance received in one's mind, or visions that may be so vivid as to seem physical (but often described as being seen with spiritual eyes). By physical, I mean obeying the scientific laws of nature, such as the traveling of photons through space as emitted by a source such as the Sun or a burning bush, or as reflected off physical objects, or as perceived by the retina of our physical eyes and recorded by our brains. Visions may not be physical, but be spiritual influences impressed directly on our spirit. This does not rule out the existence of beings with spatial and time locality, such as angels and resurrected beings, but they clearly have properties and powers foreign to our mortal knowledge.
+
+\item I believe that the influence of the Holy Ghost is most often not precise or all inclusive. It is a subtle influence that combines with the reasoning power of our brains to lead us to a decision that is favored by God compared to other decisions we are considering that are not so favored. When Nephi was impressed to cut off Laban's head, this impression did not mean that God condones decapitation under other circumstances. Our brains are influenced by the memories of all our past experiences, including the teachings of our parents and schools and by the influence of the culture(s) in which we have existed. Probably most of our decisions are a combination of reasoning impacting on that collective experience without much current influence of the Holy Ghost. Our decisions are often strongly influenced by the mortal need to satisfy our mortal appetites. Even the greatest prophets had these influences. These affected the way in which they expressed their prophetic utterances.
+
+\item When I read the scriptures, particularly the Old Testament, it's hard to believe that a loving God was as concerned as were the prophets in overcoming enemies. Thus, Saul was commanded through the prophet Samuel to slay all the Amalekites (1 Samuel 15) and was rebuked when he didn't slay the King and some of the sheep. Saul was living at a time when warring and killing was part of their culture. So within that culture God (presumably speaking through Samuel) directed Saul to do something that he would not condone in other times in order to accomplish some greater long-term purpose. We cannot conclude that because Samuel was impressed at that time to direct a mass slaying is that this is what God always wants. This is an illustration that the guidance of the Holy Ghost tends not to be precise nor all inclusive. One of God's greatest concerns in those days was to develop recognition that there was one personal God that was of much greater importance to their mortality than were the idols and pagan gods that were commonly worshiped. Through all of their other concerns, the prophets of the Old Testament managed to get guidance to that end. But their preserved descriptions of their spiritual experiences in the scriptures retain the influences of the culture in which they were embedded.
+
+\item As we try to understand the scriptures, we should also keep in mind that descriptions of the scriptural events are influenced both by the passage of time and by the description by the observers in terms that they believed. Thus, the stories in my own family first by me and my wife and then by my children have grown in ways that make them more interesting, probably at the expense of accuracy. I do not doubt that same kind of thing happened to stories in the scriptures.
+
+\item I believe Joseph Smith was a prophet in these Latter Days. He existed in a culture that believed in transcendence of spiritual over physical laws (miracles). There were many in his surroundings who claimed they had been visited personally by Jesus Christ. Many believed in buried treasure, peep stones, and divining rods. Thus, it did not surprise many when Joseph Smith claimed to have visions of buried gold plates and was impressed that he should find them and translate them. He was led to do so, but there is no evidence that he even had to look at the plates to translate them. With little formal education, and by remarkable spiritual impressions, he was able to dictate the Book of Mormon in a period of no more than three months. Eleven witnesses had miraculous visions of the existence of the plates, which they never denied. It is almost impossible to believe that Joseph with his lack of formal education could have created the translation without spiritual guidance. When the book was printed and distributed, people believed it was physical evidence for what he claimed. It became (and still is) the greatest influence on its readers to convince them that Joseph Smith was a prophet and that the church he established was guided by God.
+
+\item However, I don't necessarily believe that everything in the book is historically accurate. He created sentences in his mind that impressed him as good, and that was what he dictated (see D\&S section 9). The result is a book with remarkable spiritual insight that can lead a person to live a Christ-like life. But I will not be bothered if there is physical evidence that the history described therein is unlikely to be exactly as described. Joseph's mother recalled that Joseph regaled the family with stories of ancient America even before he received the plates. I would guess that these ``pre-visions'' influenced him as he translated.
+
+\item The same process presumably applied to the translation of the Book of Abraham in the Pearl of Great Price. Here the papyri from which he derived his impressions were clearly physical. They still exist in the possession of the Church. Copies have been made available to scholars outside the church. These scholars have mostly believed that the papyri represent Egyptian hieroglyphics from the Egyptian Book of the Dead. Although there are LDS scholars (eg, Hugh Nibley) that dispute this, it is not hard for me to believe that Joseph Smith received impressions from the papyri, not literal translations, which led him to the creation of the Book of Abraham, a book with great insight into spiritual matters. Joseph used his own definition of truth: ``Whatsoever thing is good is... true.'' (Moroni 10:6)
+
+\item The danger of deciding that some part of the scriptures is the influence of culture and not God is to allow ourselves exceptions to some of God's commandments if they do not suit us. But I believe this is a part of God's plan. We are to decide for ourselves what is right and good by heeding to the Holy Ghost. This is what gives us a testimony of Joseph Smith and the church that God directed him to establish. But we need to recognize that rationalization is also a temptation that we need to resist if it leads us to non-Christ-like decisions. One of the purposes of continuous revelation is to restate truths and practices as the culture changes. There is a greater need for this today as never before with the rapid changes in our culture brought about by technology.
+
+\item I believe that the normal description of spirit and spiritual beings are simple models that serve most people very well, guiding them to Christ-like living. We visualize God and angels as physical beings not unlike ourselves. But clearly they are endowed with properties that we can't understand or visualize. When I pray to God, I don't visualize Him in any particular location, but as an exalted being, listening with loving understanding, even when my prayer is unvoiced. I don't try to understand how He does this simultaneously with the millions of other people that might be praying at the same time. The simple model is appropriate to make my prayers meaningful to me and I hope to Him.
+
+\item I tend to think of the Holy Ghost (or one of his spiritual helpers) as a person transmitting a message to me by something like mental telepathy. This is the model that I think most LDS members have. The reality is probably quite different. I am unable to even speculate how the spiritual influence really works. But we do not need a better model in order to have our decisions be influenced by Him. The same applies to visions. If a person feels comfortable with the belief that the visit of a heavenly person is a physical reality with physical photons emitted, so be it. Whatever model works to convince one of the reality of the visitation by the testimony of the spirit is good. In fact, I believe that the attempt to attach physical laws of nature to spiritual experience is often counter-productive; the effort to do so can interfere with the benefits of the spiritual experience, e.g., in personal prayers or studying the scriptures. Some scholars call this process transcendence (belief of spiritual truths over logic or physical laws of nature). Whatever the model or transcendence, if the witness of the Holy Ghost generates faith in Jesus Christ and his gospel and motivates a person to live that gospel, I believe that helps him/her accomplish the purpose for which God gave him/her this mortal experience.
+
+\item I believe that the Holy Ghost is available to all people if they look for it and adjust their lives by its guidance. Some LDS members describe this as the Light of Christ. I think that God is concerned for all his children on earth and is pleased whenever they are influenced to live a Christ-like life, no matter what religion they adhere to. I believe that God loves all his children on this earth and always makes available His spirit to guide them. But it is up to each individual to live a life in which the spirit can be heard. I pray nightly for some of my own grandchildren who have become inactive in the church that they will listen to His spirit and be guided into a good life.
+
+\item In conclusion, my advice to a youth is to decide on the way of life that seems good to you, recognizing that you have a spirit that probably has an eternal existence. Do not get hung up on perceived deficiencies of prophets or other leaders, but pay attention to the main thrust of their messages. My own conclusion is that following the teachings and practices of the Church of Jesus Christ of Latter Day Saints is the best way I know that helps me approach a Christ-like life, although for me I have a long way to go. One of the greatest external evidences of this is to see the change in people's lives when they witness the Spirit of the Holy Ghost and join with fellow members of the church in striving to become more Christ-like. I have received guidance of the spirit in my life that has helped me make choices and given me assurance and peace that His gospel is true, and that He is pleased when I try to live it.
+
+\end{enumerate}
+
+\subsubsection*{Commentary}
+
+\subsection{Adelaide's Baby Blessing}
+
+\subsubsection*{Background}
+
+This blessing was given on September 29, 2013 at the Belmont 1 ward during sacrament meeting. We did the blessing so soon after her birth because my parents were visiting at the time. Adelaide had been very healthy and we didn't see a problem with taking her to church.
+
+Those in the circle were me, my father, Doug John, Brad Payne, Derek Staples, Taylor Killian (these last three were in the elders quorum presidency with me), Grant Bennett, and Steven Maxfield. We invited Anthony Adrian and Kathy Hubbard from Tufts, and Bekka Keithley, her fianc\'{e} Mark Nolan, and Lauren Casale.
+
+We had my mother, Meredith, and Tina all take notes. The blessing is a compilation of their notes. There may be a few things missing, but this is probably close to everything.
+
+\subsubsection*{The Blessing}
+
+\begin{enumerate}
+
+\item Heavenly Father, by the authority of the Melchizedek Priesthood, we present this infant unto thee to give her a name and a blessing. The name is Adelaide Jean Gessell.
+
+\item Adelaide, we are very happy to have received you into our family. We love you very much and you have an extended family who has shown much love unto you already. Turn to these people later in your life when you have difficulties and challenges and questions about your faith and the world.
+
+\item There are exceptionally strong women in your life. You can be one by following their faith and example.
+
+\item We bless you to love the scriptures. Dig into them even as a young girl. Your testimony will become strong as you read them.
+
+\item You will have brothers and sisters who will love you. Be strong in your example to them.
+
+\item Remember Jesus Christ and the great example he has given you. Remember most of his atonement and sacrifice that allow you to repent. 
+
+\item We bless you with physical and mental strength to overcome those trials you will have in your life. 
+
+\item We love you and are grateful for you.
+
+\item We seal these blessings upon you in the name of Jesus Christ, amen. 
+
+\end{enumerate}
+
+\subsection{Henry Hudson Webb's Patriarchal Blessing}
+
+\subsubsection*{Background}
+
+Henry Hudson Webb is my great-grandfather. He is the father of Maida Jean Webb. I must have met him several times, but I have only one memory of him, at his house during Christmastime before he passed away. I also remember visiting his home after his death to take some items that we wanted.
+
+Here is the text which appears on the document before the blessing:
+
+\textbf{A BLESSING given by HARRISON SPERRY, PATRIARCH, upon the head of HENRY HUDSON WEBB, son of THOMAS H. WEBB and ANNIE ( ) WEBB.}
+
+\textbf{born [blank] at [blank]}
+
+\subsubsection*{The Blessing}
+
+HENRY HUDSON WEBB: In the name of the Lord Jesus Christ and as a servant of the Lord holding the Holy Priesthood, and as a Patriarch in the Church of Jesus Christ of Latter-day Saints I lay my hands upon your head and give you a Patriarchal blessing. I will say unto you thou art of the House of Israel, through the loins of Ephraim, that chosen servant of the living God. The Lord has sent you here upon the earth for a wise purpose; for but a short time ago thou was with the Father in His Heavenly Abode; He knew of your spirit and of your worth, and sent you here upon the earth to perform a work and a mission. He sent you here in the midst and in the blaze of the Gospel of Jesus Christ; He knew that you would be faithful and He knew that he would be sending you to your earthly parents who would teach you of His laws, and would aid and assist you, and educate you in the principles of the Gospel, and also educate you in your scholastic education, to prepare you for a great and a mighty work upon the earth. For this is your calling. Although in your words, the Adversary may strive to destroy you, but through your faithfulness and through the faithfulness of your parents, you will be spared, and the Adversary will not have power to destroy your body and your usefulness here upon the earth. But you will live to become a mighty man in Israel, and you will go forth among the different nations and proclaim the Everlasting Gospel. You will be required to learn another language and another tongue, which you will speak fluently unto those that hear you, and your words will also astonish yourself, for the Lord will aid you in this great and mighty work. For the words of God will be in your mouth, and you will go forth with mighty power, even to the convincing of those that hear you. The angels of God's presence will be round about you; you shall converse with heavenly beings; you shall have dreams by night and visions by day that will be a great aid and comfort to you. You shall have means given unto you here upon the earth to aid and assist you in the great work that will be placed upon you. In the own due time of the Lord you will have a companion, and your posterity will be great here upon the earth. Your children and your grandchildren will rise up and call you blessed. You will be a savior upon Mount Zion; You will be a savior to your father's house; and when the time comes that you go back to your Heavenly home there is a mansion of glory prepared for you; but you will be called upon and you will have the privilege of going into the Temple of our God, and there performing aggeat [\textit{a great}] and a mighty work for your ancestors that have gone before you. For there are many there in the prison house awaiting for their friends and their kindred to perform that work for them. For they, as us, must be baptized in order to get into the Kingdom of our God. For Christ when He was here upon the earth set this pattern, and went to John and was baptized; and all God's children here upon the earth must enter in at this gate. And you will have the privilege of going forth and performing this work for your dead relatives.
+
+These blessings I seal upon you, but they are predicated upon your faithfulness here upon the earth; and if you are faithful and true before the Lord, these words will be verified upon your head. I give you this blessing as a servant of the living God, and I do it in the name of the Lord Jesus Christ, Amen.
+
+\subsection{Dad's Experience: The Power of the Holy Ghost}
+
+\subsubsection*{Background}
+
+This is an experience my father had, which he told us about one night when we were chatting online. I asked him to write it up more formally. This is his account of what happened.
+
+The Dave John mentioned here, a counselor to my father in the bishopric, is Alicia's uncle.
+
+\subsubsection*{The Experience}
+
+Some things are rarely talked about in the church. It's not that they are shameful or secret though. It's because some things are so personal and private--like the temple ordinances--that to casually speak of them would detract from their importance and sacredness. Other things--like the disciplinary council--are very private matters that would do harm to the already injured if the facts were widely known. In the experience related below I will do my best to avoid specific names and dates where possible. I am satisfied that this will maintain the confidentiality that is needed yet allow the lesson learned to be remembered.
+
+Several months ago I had the opportunity to be a part of a disciplinary council. In order to avoid any pre-judgment or exercising unrighteous dominion the members of the High Council are unaware of whom the individual is or the circumstances until the council begins. It was held in the evening and was presided over by the Stake Presidency. All the members of the High Council were present. The Stake President followed the outline given in Doctrine and Covenants Section 102 and lots were chosen. As he related the details to the council I recognized the man's name immediately as one who had been a member of the Vernal 6th Ward when I served as Bishop many years previous. I also remembered that his time spent in the ward was maybe a year or two at the most. Beyond this I couldn't recall anything that would impact the proceedings of the night. The Stake President asked if any of us could offer any insight about this man since his family had lived in the area for some time and he was known to many. Little was offered so the council proceeded.
+
+As the man (I'll call him John) entered the room the Stake President gave a brief summary of how the council would proceed. John was then given the opportunity to present the facts as he knew them. Experience has shown me that at these times men are extremely humble and their perception of past events is stated boldly and honestly. The council then asked him questions that would clarify the situation and his motivation for attending the council.
+
+One question posed to him was whether any previous disciplinary council had been held for the same offense. He stated that yes, one was held many years ago but the decision of that council was one of ``no decision.'' Did he feel that the bishop should have done more? Yes, he said, the bishop was at fault. He and his counselors (David John and Gary Monsen) should have recommended that he be disfellowshipped so that the punishment would deter further transgression. Following some further questions John exited the room and the council discussed the case.
+
+The discussion was lengthy, and one member of the council stated that he felt a very strong sense of brotherhood in that room. He said further that this brotherhood was necessary so that no unkind feelings existed and justice and mercy could both be served.
+
+After an hour of deliberations and prayer the judgment of the council was excommunication and the council ended. John agreed with the decision but for those present it was sad to witness a formerly active and faithful saint lose his membership for worldly, temporary gratification.
+
+At the conclusion of the council John was asked to stand at the door and greet everyone as they exited. I greeted him feeling somewhat awkward. John seemed grateful to see me however, and he asked if I was his bishop many years ago. I answered that it indeed was me and that I remembered him also. Then he said, ``I'm glad that Monsen guy wasn't here tonight because he was antagonistic at my last disciplinary council.'' I really didn't comprehend what that meant so I just smiled, wished him the best, and left the room.
+
+I started walking down the hall and then it hit me! He was speaking of my counselor Gary Monson. John's previous disciplinary council was when he was in my ward and I was the bishop who should have exacted greater punishment! All of the details now came flooding back into memory. The proverbial light bulb went on! I find it difficult to explain going from a moment of remembering very little to instantly recalling the specific event he mentioned. It was miraculous to me.
+
+As I have pondered how this could have happened I have come to the conclusion that ``unkind feelings'' could very well have been present in the council had I remembered that I presided over his previous council. It then became obvious to me that the Holy Ghost had suppressed my memory for a short time so that the will of the Lord could be accomplished. How the Holy Ghost works is a mystery to me. Maybe one day I will understand it more fully, but until that day I am content in the knowledge that he works in ways incomprehensible to man and that his power is real.
+
+Scott Gessell
+
+September 1, 2013
+
+\subsection{Priesthood Line of Authority}
+
+Line of Authority Of Bryce Gessell
+
+\begin{itemize}
+\item Bryce Scott Gessell was ordained an Elder on May 22, 2005 by Scott Lindsay Gessell
+
+\item Scott Lindsay Gessell was ordained a High Priest on July 18, 1999 by Lynn ``S'' Ware
+
+\item Lynn ``S'' Ware was ordained a High Priest on October 18, 1992 by Gerald Max Ware
+
+\item Gerald Max Ware was ordained a High Priest on June 25, 1974 by Gerald H. Smith
+
+\item Gerald H. Smith was ordained a High Priest on November 23, 1955 by John Longden
+
+\item John Longden was ordained a High Priest on September 27, 1925 by Rudger Clawson
+
+\item Rudger Clawson was ordained an Apostle on October 10, 1898 by Lorenzo Snow
+
+\item Lorenzo Snow was ordained an Apostle on February 12, 1849 by Heber C. Kimball
+
+\item Heber C. Kimball was ordained an Apostle on February 14, 1835 under the hands of the Three Witnesses, Oliver Cowdery, David Whitmer and Martin Harris
+
+\item The Three Witnesses were called by revelation to choose the Twelve Apostles and on February 14, 1835, were ``blessed by the laying on of the hands of the Presidency,'' Joseph Smith Jr., Sidney Rigdon and Frederick G. Williams to ordain the Twelve Apostles (History of the Church 2:187--8)
+
+\item Joseph Smith and Oliver Cowdery received the Melchizedek Priesthood in 1829 from Peter, James and John
+
+\item Peter, James and John were ordained Apostles by the Lord Jesus Christ (John 15:16)
+\end{itemize}
+
+\subsection{Important principles I have learned}
+
+\begin{enumerate}
+
+\item The Lord does not command me to feel, he commands me to act. (10/11/2015: the feelings come later.)
+
+\item Most of my important spiritual experiences have come while I am around other people.
+
+\item Being happy is an achievement.
+
+\item One of the keys to making my prayers refreshing, great, and powerful is to pray as though I believe my prayer will actually make a difference. It will.
+
+\item The Spirit testifies to me both of things that are true and things that I need to believe at this time in my life in order to progress, regardless of whether they are true.
+
+\end{enumerate}
+
+\end{document}
