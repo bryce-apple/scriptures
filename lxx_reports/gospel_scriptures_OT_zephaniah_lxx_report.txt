@@ -1,0 +1,16 @@
+fill_lxx report for gospel_scriptures_OT_zephaniah.tex
+Output written to: gospel_scriptures_OT_zephaniah_lxx.tex
+
+Placeholders filled:        53
+Already filled (untouched): 0
+Not fillable:               0
+
+Filled via a versification remap (KJV ref -> different LXX ref);
+worth spot-checking these:
+  Zephaniah 2:15  <-  LXX Zep.3:1
+  Zephaniah 3:1  <-  LXX Zep.3:2
+
+Filled but start with ALL-CAPS words (Swete's decorative opening
+capitals, printed without accents -- fix these by hand):
+  Zephaniah 1:1
+

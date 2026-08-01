@@ -1,0 +1,24 @@
+fill_lxx report for gospel_scriptures_OT_hosea.tex
+Output written to: gospel_scriptures_OT_hosea_lxx.tex
+
+Placeholders filled:        197
+Already filled (untouched): 0
+Not fillable:               0
+
+Filled via a versification remap (KJV ref -> different LXX ref);
+worth spot-checking these:
+  Hosea 13:16  <-  LXX Hos.14:1
+  Hosea 14:1  <-  LXX Hos.14:2
+  Hosea 14:2  <-  LXX Hos.14:3
+  Hosea 14:3  <-  LXX Hos.14:4
+  Hosea 14:4  <-  LXX Hos.14:5
+  Hosea 14:5  <-  LXX Hos.14:6
+  Hosea 14:6  <-  LXX Hos.14:7
+  Hosea 14:7  <-  LXX Hos.14:8
+  Hosea 14:8  <-  LXX Hos.14:9
+  Hosea 14:9  <-  LXX Hos.14:10
+
+Filled but start with ALL-CAPS words (Swete's decorative opening
+capitals, printed without accents -- fix these by hand):
+  Hosea 1:1
+

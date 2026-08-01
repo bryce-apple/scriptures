@@ -1,0 +1,23 @@
+fill_lxx report for gospel_scriptures_OT_isaiah.tex
+Output written to: gospel_scriptures_OT_isaiah_lxx.tex
+
+Placeholders filled:        1279
+Already filled (untouched): 10
+Not fillable:               3
+
+NOT filled (left as commented placeholders):
+  Isaiah 2:22: maps to Isa.2:22, but that slot is empty in Swete
+  Isaiah 38:15: LXX omits this verse (empty in Swete)
+  Isaiah 56:12: maps to Isa.56:12, but that slot is empty in Swete
+
+Verses that already had LXX text (not modified):
+  Isaiah 1:1
+  Isaiah 14:12
+  Isaiah 28:10
+  Isaiah 28:13
+  Isaiah 34:5
+  Isaiah 40:3
+  Isaiah 40:4
+  Isaiah 40:5
+  Isaiah 53:4
+  Isaiah 53:12

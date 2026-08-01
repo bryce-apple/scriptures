@@ -1,0 +1,201 @@
+fill_lxx report for gospel_scriptures_OT_1kings.tex
+Output written to: gospel_scriptures_OT_1kings_lxx.tex
+
+Placeholders filled:        792
+Already filled (untouched): 0
+Not fillable:               24
+
+Filled via a versification remap (KJV ref -> different LXX ref);
+worth spot-checking these:
+  1 Kings 4:21  <-  LXX 1Ki.10:26
+  1 Kings 7:1  <-  LXX 1Ki.7:38+1Ki.7:50
+  1 Kings 7:2  <-  LXX 1Ki.7:39
+  1 Kings 7:3  <-  LXX 1Ki.7:40
+  1 Kings 7:4  <-  LXX 1Ki.7:41
+  1 Kings 7:5  <-  LXX 1Ki.7:42
+  1 Kings 7:6  <-  LXX 1Ki.7:43
+  1 Kings 7:7  <-  LXX 1Ki.7:44
+  1 Kings 7:8  <-  LXX 1Ki.7:45
+  1 Kings 7:9  <-  LXX 1Ki.7:46
+  1 Kings 7:10  <-  LXX 1Ki.7:47
+  1 Kings 7:11  <-  LXX 1Ki.7:48
+  1 Kings 7:12  <-  LXX 1Ki.7:49
+  1 Kings 7:13  <-  LXX 1Ki.7:1
+  1 Kings 7:14  <-  LXX 1Ki.7:2
+  1 Kings 7:15  <-  LXX 1Ki.7:3
+  1 Kings 7:16  <-  LXX 1Ki.7:4
+  1 Kings 7:17  <-  LXX 1Ki.7:5
+  1 Kings 7:18  <-  LXX 1Ki.7:6
+  1 Kings 7:19  <-  LXX 1Ki.7:8
+  1 Kings 7:20  <-  LXX 1Ki.7:9
+  1 Kings 7:21  <-  LXX 1Ki.7:7
+  1 Kings 7:23  <-  LXX 1Ki.7:10
+  1 Kings 7:24  <-  LXX 1Ki.7:11
+  1 Kings 7:25  <-  LXX 1Ki.7:13
+  1 Kings 7:26  <-  LXX 1Ki.7:12
+  1 Kings 7:27  <-  LXX 1Ki.7:14
+  1 Kings 7:28  <-  LXX 1Ki.7:15
+  1 Kings 7:29  <-  LXX 1Ki.7:16
+  1 Kings 7:30  <-  LXX 1Ki.7:17
+  1 Kings 7:32  <-  LXX 1Ki.7:18
+  1 Kings 7:33  <-  LXX 1Ki.7:19
+  1 Kings 7:34  <-  LXX 1Ki.7:20
+  1 Kings 7:35  <-  LXX 1Ki.7:21
+  1 Kings 7:36  <-  LXX 1Ki.7:22
+  1 Kings 7:37  <-  LXX 1Ki.7:23
+  1 Kings 7:38  <-  LXX 1Ki.7:24
+  1 Kings 7:39  <-  LXX 1Ki.7:25
+  1 Kings 7:40  <-  LXX 1Ki.7:26
+  1 Kings 7:41  <-  LXX 1Ki.7:27
+  1 Kings 7:42  <-  LXX 1Ki.7:28
+  1 Kings 7:43  <-  LXX 1Ki.7:29
+  1 Kings 7:44  <-  LXX 1Ki.7:30
+  1 Kings 7:45  <-  LXX 1Ki.7:31
+  1 Kings 7:46  <-  LXX 1Ki.7:33
+  1 Kings 7:47  <-  LXX 1Ki.7:32
+  1 Kings 7:48  <-  LXX 1Ki.7:34
+  1 Kings 7:49  <-  LXX 1Ki.7:35
+  1 Kings 7:50  <-  LXX 1Ki.7:36
+  1 Kings 7:51  <-  LXX 1Ki.7:37
+  1 Kings 8:12  <-  LXX 1Ki.8:53
+  1 Kings 8:13  <-  LXX 1Ki.8:53
+  1 Kings 9:15  <-  LXX 1Ki.10:22
+  1 Kings 9:16  <-  LXX 1Ki.5:14
+  1 Kings 9:17  <-  LXX 1Ki.10:22
+  1 Kings 9:18  <-  LXX 1Ki.10:22
+  1 Kings 9:19  <-  LXX 1Ki.10:22
+  1 Kings 9:20  <-  LXX 1Ki.10:22
+  1 Kings 9:21  <-  LXX 1Ki.10:22
+  1 Kings 9:22  <-  LXX 1Ki.10:22
+  1 Kings 9:24  <-  LXX 1Ki.9:9
+  1 Kings 11:5  <-  LXX 1Ki.11:6
+  1 Kings 11:6  <-  LXX 1Ki.11:8
+  1 Kings 11:7  <-  LXX 1Ki.11:5
+  1 Kings 11:8  <-  LXX 1Ki.11:7
+  1 Kings 11:23  <-  LXX 1Ki.11:14
+  1 Kings 11:24  <-  LXX 1Ki.11:14
+  1 Kings 11:25  <-  LXX 1Ki.11:14
+  1 Kings 12:2  <-  LXX 1Ki.11:43
+  1 Kings 12:17  <-  LXX 1Ki.12:24
+  1 Kings 14:1  <-  LXX 1Ki.12:24
+  1 Kings 14:2  <-  LXX 1Ki.12:24
+  1 Kings 14:3  <-  LXX 1Ki.12:24
+  1 Kings 14:4  <-  LXX 1Ki.12:24
+  1 Kings 14:6  <-  LXX 1Ki.12:24
+  1 Kings 14:11  <-  LXX 1Ki.12:24
+  1 Kings 14:12  <-  LXX 1Ki.12:24
+  1 Kings 14:17  <-  LXX 1Ki.12:24
+  1 Kings 14:18  <-  LXX 1Ki.12:24
+  1 Kings 14:22  <-  LXX 1Ki.12:24
+  1 Kings 20:1  <-  LXX 1Ki.21:1
+  1 Kings 20:2  <-  LXX 1Ki.21:2
+  1 Kings 20:3  <-  LXX 1Ki.21:3
+  1 Kings 20:4  <-  LXX 1Ki.21:4
+  1 Kings 20:5  <-  LXX 1Ki.21:5
+  1 Kings 20:6  <-  LXX 1Ki.21:6
+  1 Kings 20:7  <-  LXX 1Ki.21:7
+  1 Kings 20:8  <-  LXX 1Ki.21:8
+  1 Kings 20:9  <-  LXX 1Ki.21:9
+  1 Kings 20:10  <-  LXX 1Ki.21:10
+  1 Kings 20:11  <-  LXX 1Ki.21:11
+  1 Kings 20:12  <-  LXX 1Ki.21:12
+  1 Kings 20:13  <-  LXX 1Ki.21:13
+  1 Kings 20:14  <-  LXX 1Ki.21:14
+  1 Kings 20:15  <-  LXX 1Ki.21:15
+  1 Kings 20:16  <-  LXX 1Ki.21:16
+  1 Kings 20:17  <-  LXX 1Ki.21:17
+  1 Kings 20:18  <-  LXX 1Ki.21:18
+  1 Kings 20:19  <-  LXX 1Ki.21:19
+  1 Kings 20:20  <-  LXX 1Ki.21:20
+  1 Kings 20:21  <-  LXX 1Ki.21:21
+  1 Kings 20:22  <-  LXX 1Ki.21:22
+  1 Kings 20:23  <-  LXX 1Ki.21:23
+  1 Kings 20:24  <-  LXX 1Ki.21:24
+  1 Kings 20:25  <-  LXX 1Ki.21:25
+  1 Kings 20:26  <-  LXX 1Ki.21:26
+  1 Kings 20:27  <-  LXX 1Ki.21:27
+  1 Kings 20:28  <-  LXX 1Ki.21:28
+  1 Kings 20:29  <-  LXX 1Ki.21:29
+  1 Kings 20:30  <-  LXX 1Ki.21:30
+  1 Kings 20:31  <-  LXX 1Ki.21:31
+  1 Kings 20:32  <-  LXX 1Ki.21:32
+  1 Kings 20:33  <-  LXX 1Ki.21:33
+  1 Kings 20:34  <-  LXX 1Ki.21:34
+  1 Kings 20:35  <-  LXX 1Ki.21:35
+  1 Kings 20:36  <-  LXX 1Ki.21:36
+  1 Kings 20:37  <-  LXX 1Ki.21:37
+  1 Kings 20:38  <-  LXX 1Ki.21:38
+  1 Kings 20:39  <-  LXX 1Ki.21:39
+  1 Kings 20:40  <-  LXX 1Ki.21:40
+  1 Kings 20:41  <-  LXX 1Ki.21:41
+  1 Kings 20:42  <-  LXX 1Ki.21:42
+  1 Kings 20:43  <-  LXX 1Ki.21:43
+  1 Kings 21:1  <-  LXX 1Ki.20:1
+  1 Kings 21:2  <-  LXX 1Ki.20:2
+  1 Kings 21:3  <-  LXX 1Ki.20:3
+  1 Kings 21:4  <-  LXX 1Ki.20:4
+  1 Kings 21:5  <-  LXX 1Ki.20:5
+  1 Kings 21:6  <-  LXX 1Ki.20:6
+  1 Kings 21:7  <-  LXX 1Ki.20:7
+  1 Kings 21:8  <-  LXX 1Ki.20:8
+  1 Kings 21:9  <-  LXX 1Ki.20:9
+  1 Kings 21:10  <-  LXX 1Ki.20:10
+  1 Kings 21:13  <-  LXX 1Ki.20:13
+  1 Kings 21:14  <-  LXX 1Ki.20:14
+  1 Kings 21:15  <-  LXX 1Ki.20:15
+  1 Kings 21:16  <-  LXX 1Ki.20:16
+  1 Kings 21:17  <-  LXX 1Ki.20:17
+  1 Kings 21:18  <-  LXX 1Ki.20:18
+  1 Kings 21:19  <-  LXX 1Ki.20:19
+  1 Kings 21:20  <-  LXX 1Ki.20:20
+  1 Kings 21:21  <-  LXX 1Ki.20:21
+  1 Kings 21:22  <-  LXX 1Ki.20:22
+  1 Kings 21:23  <-  LXX 1Ki.20:23
+  1 Kings 21:24  <-  LXX 1Ki.20:24
+  1 Kings 21:25  <-  LXX 1Ki.20:25
+  1 Kings 21:26  <-  LXX 1Ki.20:26
+  1 Kings 21:27  <-  LXX 1Ki.20:27
+  1 Kings 21:28  <-  LXX 1Ki.20:28
+  1 Kings 21:29  <-  LXX 1Ki.20:29
+  1 Kings 22:43  <-  LXX 1Ki.16:28
+  1 Kings 22:44  <-  LXX 1Ki.16:28
+  1 Kings 22:45  <-  LXX 1Ki.16:28
+  1 Kings 22:46  <-  LXX 1Ki.16:28
+  1 Kings 22:47  <-  LXX 1Ki.16:28
+  1 Kings 22:48  <-  LXX 1Ki.16:28
+  1 Kings 22:49  <-  LXX 1Ki.16:28
+  1 Kings 22:50  <-  LXX 1Ki.16:28
+  1 Kings 22:51  <-  LXX 1Ki.22:52
+  1 Kings 22:52  <-  LXX 1Ki.22:53
+  1 Kings 22:53  <-  LXX 1Ki.22:54
+
+Filled but start with ALL-CAPS words (Swete's decorative opening
+capitals, printed without accents -- fix these by hand):
+  1 Kings 1:1
+
+NOT filled (left as commented placeholders):
+  1 Kings 3:1: LXX omits this verse (empty in Swete)
+  1 Kings 4:34: no LXX verse (absent from Swete, no mapping)
+  1 Kings 5:18: no LXX verse (absent from Swete, no mapping)
+  1 Kings 6:35: no LXX verse (absent from Swete, no mapping)
+  1 Kings 6:36: no LXX verse (absent from Swete, no mapping)
+  1 Kings 6:37: no LXX verse (absent from Swete, no mapping)
+  1 Kings 6:38: no LXX verse (absent from Swete, no mapping)
+  1 Kings 9:23: LXX omits this verse (empty in Swete)
+  1 Kings 9:25: LXX omits this verse (empty in Swete)
+  1 Kings 11:39: LXX omits this verse (empty in Swete)
+  1 Kings 13:27: LXX omits this verse (empty in Swete)
+  1 Kings 14:5: LXX omits this verse (empty in Swete)
+  1 Kings 14:7: LXX omits this verse (empty in Swete)
+  1 Kings 14:8: LXX omits this verse (empty in Swete)
+  1 Kings 14:9: LXX omits this verse (empty in Swete)
+  1 Kings 14:10: LXX omits this verse (empty in Swete)
+  1 Kings 14:13: LXX omits this verse (empty in Swete)
+  1 Kings 14:14: LXX omits this verse (empty in Swete)
+  1 Kings 14:15: LXX omits this verse (empty in Swete)
+  1 Kings 14:16: LXX omits this verse (empty in Swete)
+  1 Kings 14:19: LXX omits this verse (empty in Swete)
+  1 Kings 14:20: LXX omits this verse (empty in Swete)
+  1 Kings 15:6: LXX omits this verse (empty in Swete)
+  1 Kings 15:32: LXX omits this verse (empty in Swete)
+

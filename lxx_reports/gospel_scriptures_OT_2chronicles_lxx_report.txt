@@ -1,0 +1,15 @@
+fill_lxx report for gospel_scriptures_OT_2chronicles.tex
+Output written to: gospel_scriptures_OT_2chronicles_lxx.tex
+
+Placeholders filled:        820
+Already filled (untouched): 0
+Not fillable:               2
+
+Filled but start with ALL-CAPS words (Swete's decorative opening
+capitals, printed without accents -- fix these by hand):
+  2 Chronicles 1:1
+
+NOT filled (left as commented placeholders):
+  2 Chronicles 3:12: LXX omits this verse (empty in Swete)
+  2 Chronicles 27:8: LXX omits this verse (empty in Swete)
+

@@ -1,0 +1,52 @@
+fill_lxx report for gospel_scriptures_OT_leviticus.tex
+Output written to: gospel_scriptures_OT_leviticus_lxx.tex
+
+Placeholders filled:        859
+Already filled (untouched): 0
+Not fillable:               0
+
+Filled via a versification remap (KJV ref -> different LXX ref);
+worth spot-checking these:
+  Leviticus 7:1  <-  LXX Lev.6:31
+  Leviticus 7:2  <-  LXX Lev.6:32
+  Leviticus 7:3  <-  LXX Lev.6:33
+  Leviticus 7:4  <-  LXX Lev.6:34
+  Leviticus 7:5  <-  LXX Lev.6:35
+  Leviticus 7:6  <-  LXX Lev.6:36
+  Leviticus 7:7  <-  LXX Lev.6:37
+  Leviticus 7:8  <-  LXX Lev.6:38
+  Leviticus 7:9  <-  LXX Lev.6:39
+  Leviticus 7:10  <-  LXX Lev.6:40
+  Leviticus 7:11  <-  LXX Lev.7:1
+  Leviticus 7:12  <-  LXX Lev.7:2
+  Leviticus 7:13  <-  LXX Lev.7:3
+  Leviticus 7:14  <-  LXX Lev.7:4
+  Leviticus 7:15  <-  LXX Lev.7:5
+  Leviticus 7:16  <-  LXX Lev.7:6
+  Leviticus 7:17  <-  LXX Lev.7:7
+  Leviticus 7:18  <-  LXX Lev.7:8
+  Leviticus 7:19  <-  LXX Lev.7:9
+  Leviticus 7:20  <-  LXX Lev.7:10
+  Leviticus 7:21  <-  LXX Lev.7:11
+  Leviticus 7:22  <-  LXX Lev.7:12
+  Leviticus 7:23  <-  LXX Lev.7:13
+  Leviticus 7:24  <-  LXX Lev.7:14
+  Leviticus 7:25  <-  LXX Lev.7:15
+  Leviticus 7:26  <-  LXX Lev.7:16
+  Leviticus 7:27  <-  LXX Lev.7:17
+  Leviticus 7:28  <-  LXX Lev.7:18
+  Leviticus 7:29  <-  LXX Lev.7:19
+  Leviticus 7:30  <-  LXX Lev.7:20
+  Leviticus 7:31  <-  LXX Lev.7:21
+  Leviticus 7:32  <-  LXX Lev.7:22
+  Leviticus 7:33  <-  LXX Lev.7:23
+  Leviticus 7:34  <-  LXX Lev.7:24
+  Leviticus 7:35  <-  LXX Lev.7:25
+  Leviticus 7:36  <-  LXX Lev.7:26
+  Leviticus 7:37  <-  LXX Lev.7:27
+  Leviticus 7:38  <-  LXX Lev.7:28
+
+Filled but start with ALL-CAPS words (Swete's decorative opening
+capitals, printed without accents -- fix these by hand):
+  Leviticus 1:1
+

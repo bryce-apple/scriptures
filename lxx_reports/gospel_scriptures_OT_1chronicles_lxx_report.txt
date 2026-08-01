@@ -1,0 +1,28 @@
+fill_lxx report for gospel_scriptures_OT_1chronicles.tex
+Output written to: gospel_scriptures_OT_1chronicles_lxx.tex
+
+Placeholders filled:        927
+Already filled (untouched): 0
+Not fillable:               15
+
+Filled but start with ALL-CAPS words (Swete's decorative opening
+capitals, printed without accents -- fix these by hand):
+  1 Chronicles 1:1
+
+NOT filled (left as commented placeholders):
+  1 Chronicles 1:11: LXX omits this verse (empty in Swete)
+  1 Chronicles 1:12: LXX omits this verse (empty in Swete)
+  1 Chronicles 1:13: LXX omits this verse (empty in Swete)
+  1 Chronicles 1:14: LXX omits this verse (empty in Swete)
+  1 Chronicles 1:15: LXX omits this verse (empty in Swete)
+  1 Chronicles 1:16: LXX omits this verse (empty in Swete)
+  1 Chronicles 1:18: LXX omits this verse (empty in Swete)
+  1 Chronicles 1:19: LXX omits this verse (empty in Swete)
+  1 Chronicles 1:20: LXX omits this verse (empty in Swete)
+  1 Chronicles 1:21: LXX omits this verse (empty in Swete)
+  1 Chronicles 1:22: LXX omits this verse (empty in Swete)
+  1 Chronicles 1:23: LXX omits this verse (empty in Swete)
+  1 Chronicles 1:48: LXX omits this verse (empty in Swete)
+  1 Chronicles 6:73: LXX omits this verse (empty in Swete)
+  1 Chronicles 16:24: LXX omits this verse (empty in Swete)
+

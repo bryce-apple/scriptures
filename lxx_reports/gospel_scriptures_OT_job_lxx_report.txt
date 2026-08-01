@@ -1,0 +1,76 @@
+fill_lxx report for gospel_scriptures_OT_job.tex
+Output written to: gospel_scriptures_OT_job_lxx.tex
+
+Placeholders filled:        1068
+Already filled (untouched): 0
+Not fillable:               2
+
+Filled via a versification remap (KJV ref -> different LXX ref);
+worth spot-checking these:
+  Job 40:1  <-  LXX Job.39:31
+  Job 40:2  <-  LXX Job.39:32
+  Job 40:3  <-  LXX Job.39:33
+  Job 40:4  <-  LXX Job.39:34
+  Job 40:5  <-  LXX Job.39:35
+  Job 40:6  <-  LXX Job.40:1
+  Job 40:7  <-  LXX Job.40:2
+  Job 40:8  <-  LXX Job.40:3
+  Job 40:9  <-  LXX Job.40:4
+  Job 40:10  <-  LXX Job.40:5
+  Job 40:11  <-  LXX Job.40:6
+  Job 40:12  <-  LXX Job.40:7
+  Job 40:13  <-  LXX Job.40:8
+  Job 40:14  <-  LXX Job.40:9
+  Job 40:15  <-  LXX Job.40:10
+  Job 40:16  <-  LXX Job.40:11
+  Job 40:17  <-  LXX Job.40:12
+  Job 40:18  <-  LXX Job.40:13
+  Job 40:19  <-  LXX Job.40:14
+  Job 40:20  <-  LXX Job.40:15
+  Job 40:21  <-  LXX Job.40:16
+  Job 40:22  <-  LXX Job.40:17
+  Job 40:23  <-  LXX Job.40:18
+  Job 40:24  <-  LXX Job.40:19
+  Job 41:1  <-  LXX Job.40:20
+  Job 41:2  <-  LXX Job.40:21
+  Job 41:3  <-  LXX Job.40:22
+  Job 41:4  <-  LXX Job.40:23
+  Job 41:5  <-  LXX Job.40:24
+  Job 41:6  <-  LXX Job.40:25
+  Job 41:7  <-  LXX Job.40:26
+  Job 41:8  <-  LXX Job.40:27
+  Job 41:9  <-  LXX Job.40:27
+  Job 41:10  <-  LXX Job.41:1
+  Job 41:11  <-  LXX Job.41:2
+  Job 41:12  <-  LXX Job.41:3
+  Job 41:13  <-  LXX Job.41:4
+  Job 41:14  <-  LXX Job.41:5
+  Job 41:15  <-  LXX Job.41:6
+  Job 41:16  <-  LXX Job.41:7
+  Job 41:17  <-  LXX Job.41:8
+  Job 41:18  <-  LXX Job.41:9
+  Job 41:19  <-  LXX Job.41:10
+  Job 41:20  <-  LXX Job.41:11
+  Job 41:21  <-  LXX Job.41:12
+  Job 41:22  <-  LXX Job.41:13
+  Job 41:23  <-  LXX Job.41:14
+  Job 41:24  <-  LXX Job.41:15
+  Job 41:25  <-  LXX Job.41:16
+  Job 41:26  <-  LXX Job.41:17
+  Job 41:27  <-  LXX Job.41:18
+  Job 41:28  <-  LXX Job.41:19
+  Job 41:29  <-  LXX Job.41:20
+  Job 41:30  <-  LXX Job.41:21
+  Job 41:31  <-  LXX Job.41:22
+  Job 41:32  <-  LXX Job.41:23
+  Job 41:33  <-  LXX Job.41:24
+  Job 41:34  <-  LXX Job.41:25
+
+Filled but start with ALL-CAPS words (Swete's decorative opening
+capitals, printed without accents -- fix these by hand):
+  Job 1:1
+
+NOT filled (left as commented placeholders):
+  Job 10:22: no LXX verse (absent from Swete, no mapping)
+  Job 35:3: LXX omits this verse (empty in Swete)
+

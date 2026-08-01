@@ -1,0 +1,24 @@
+fill_lxx report for gospel_scriptures_OT_genesis.tex
+Output written to: gospel_scriptures_OT_genesis_lxx.tex
+
+Placeholders filled:        1524
+Already filled (untouched): 8
+Not fillable:               1
+
+Filled via a versification remap (KJV ref -> different LXX ref);
+worth spot-checking these:
+  Genesis 2:25  <-  LXX Gen.3:1
+  Genesis 5:32  <-  LXX Gen.6:1
+
+NOT filled (left as commented placeholders):
+  Genesis 31:51: LXX omits this verse (empty in Swete)
+
+Verses that already had LXX text (not modified):
+  Genesis 1:1
+  Genesis 1:2
+  Genesis 1:26
+  Genesis 4:24
+  Genesis 11:5
+  Genesis 15:6
+  Genesis 22:1
+  Genesis 22:2

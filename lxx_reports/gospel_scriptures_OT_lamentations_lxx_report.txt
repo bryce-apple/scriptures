@@ -1,0 +1,21 @@
+fill_lxx report for gospel_scriptures_OT_lamentations.tex
+Output written to: gospel_scriptures_OT_lamentations_lxx.tex
+
+Placeholders filled:        150
+Already filled (untouched): 0
+Not fillable:               4
+
+Filled but start with ALL-CAPS words (Swete's decorative opening
+capitals, printed without accents -- fix these by hand):
+  Lamentations 1:1
+  Lamentations 1:5
+  Lamentations 2:5
+  Lamentations 3:12
+  Lamentations 4:5
+
+NOT filled (left as commented placeholders):
+  Lamentations 3:22: LXX omits this verse (empty in Swete)
+  Lamentations 3:23: LXX omits this verse (empty in Swete)
+  Lamentations 3:24: LXX omits this verse (empty in Swete)
+  Lamentations 3:29: LXX omits this verse (empty in Swete)
+

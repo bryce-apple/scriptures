@@ -1,0 +1,11 @@
+fill_lxx report for gospel_scriptures_OT_habakkuk.tex
+Output written to: gospel_scriptures_OT_habakkuk_lxx.tex
+
+Placeholders filled:        56
+Already filled (untouched): 0
+Not fillable:               0
+
+Filled but start with ALL-CAPS words (Swete's decorative opening
+capitals, printed without accents -- fix these by hand):
+  Habakkuk 1:1
+

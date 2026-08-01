@@ -1,0 +1,14 @@
+fill_lxx report for gospel_scriptures_OT_2kings.tex
+Output written to: gospel_scriptures_OT_2kings_lxx.tex
+
+Placeholders filled:        718
+Already filled (untouched): 0
+Not fillable:               1
+
+Filled but start with ALL-CAPS words (Swete's decorative opening
+capitals, printed without accents -- fix these by hand):
+  2 Kings 1:1
+
+NOT filled (left as commented placeholders):
+  2 Kings 25:10: LXX omits this verse (empty in Swete)
+

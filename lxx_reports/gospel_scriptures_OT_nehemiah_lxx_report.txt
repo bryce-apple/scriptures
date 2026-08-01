@@ -1,0 +1,41 @@
+fill_lxx report for gospel_scriptures_OT_nehemiah.tex
+Output written to: gospel_scriptures_OT_nehemiah_lxx.tex
+
+Placeholders filled:        378
+Already filled (untouched): 0
+Not fillable:               28
+
+Filled but start with ALL-CAPS words (Swete's decorative opening
+capitals, printed without accents -- fix these by hand):
+  Nehemiah 1:1
+
+NOT filled (left as commented placeholders):
+  Nehemiah 3:7: LXX omits this verse (empty in Swete)
+  Nehemiah 7:26: LXX omits this verse (empty in Swete)
+  Nehemiah 7:27: LXX omits this verse (empty in Swete)
+  Nehemiah 7:68: LXX omits this verse (empty in Swete)
+  Nehemiah 10:11: LXX omits this verse (empty in Swete)
+  Nehemiah 11:16: LXX omits this verse (empty in Swete)
+  Nehemiah 11:20: LXX omits this verse (empty in Swete)
+  Nehemiah 11:21: LXX omits this verse (empty in Swete)
+  Nehemiah 11:28: LXX omits this verse (empty in Swete)
+  Nehemiah 11:29: LXX omits this verse (empty in Swete)
+  Nehemiah 11:32: LXX omits this verse (empty in Swete)
+  Nehemiah 11:33: LXX omits this verse (empty in Swete)
+  Nehemiah 11:34: LXX omits this verse (empty in Swete)
+  Nehemiah 11:35: LXX omits this verse (empty in Swete)
+  Nehemiah 12:4: LXX omits this verse (empty in Swete)
+  Nehemiah 12:5: LXX omits this verse (empty in Swete)
+  Nehemiah 12:6: LXX omits this verse (empty in Swete)
+  Nehemiah 12:9: LXX omits this verse (empty in Swete)
+  Nehemiah 12:15: LXX omits this verse (empty in Swete)
+  Nehemiah 12:16: LXX omits this verse (empty in Swete)
+  Nehemiah 12:17: LXX omits this verse (empty in Swete)
+  Nehemiah 12:18: LXX omits this verse (empty in Swete)
+  Nehemiah 12:19: LXX omits this verse (empty in Swete)
+  Nehemiah 12:20: LXX omits this verse (empty in Swete)
+  Nehemiah 12:21: LXX omits this verse (empty in Swete)
+  Nehemiah 12:38: LXX omits this verse (empty in Swete)
+  Nehemiah 12:40: LXX omits this verse (empty in Swete)
+  Nehemiah 12:41: LXX omits this verse (empty in Swete)
+

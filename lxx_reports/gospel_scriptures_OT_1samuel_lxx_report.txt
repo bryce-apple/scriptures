@@ -1,0 +1,81 @@
+fill_lxx report for gospel_scriptures_OT_1samuel.tex
+Output written to: gospel_scriptures_OT_1samuel_lxx.tex
+
+Placeholders filled:        769
+Already filled (untouched): 1
+Not fillable:               40
+
+Filled via a versification remap (KJV ref -> different LXX ref);
+worth spot-checking these:
+  1 Samuel 23:29  <-  LXX 1Sa.24:1
+  1 Samuel 24:1  <-  LXX 1Sa.24:2
+  1 Samuel 24:2  <-  LXX 1Sa.24:3
+  1 Samuel 24:3  <-  LXX 1Sa.24:4
+  1 Samuel 24:4  <-  LXX 1Sa.24:5
+  1 Samuel 24:5  <-  LXX 1Sa.24:6
+  1 Samuel 24:6  <-  LXX 1Sa.24:7
+  1 Samuel 24:7  <-  LXX 1Sa.24:8
+  1 Samuel 24:8  <-  LXX 1Sa.24:9
+  1 Samuel 24:9  <-  LXX 1Sa.24:10
+  1 Samuel 24:10  <-  LXX 1Sa.24:11
+  1 Samuel 24:11  <-  LXX 1Sa.24:12
+  1 Samuel 24:12  <-  LXX 1Sa.24:13
+  1 Samuel 24:13  <-  LXX 1Sa.24:14
+  1 Samuel 24:14  <-  LXX 1Sa.24:15
+  1 Samuel 24:15  <-  LXX 1Sa.24:16
+  1 Samuel 24:16  <-  LXX 1Sa.24:17
+  1 Samuel 24:17  <-  LXX 1Sa.24:18
+  1 Samuel 24:18  <-  LXX 1Sa.24:19
+  1 Samuel 24:19  <-  LXX 1Sa.24:20
+  1 Samuel 24:20  <-  LXX 1Sa.24:21
+  1 Samuel 24:21  <-  LXX 1Sa.24:22
+  1 Samuel 24:22  <-  LXX 1Sa.24:23
+
+Filled but start with ALL-CAPS words (Swete's decorative opening
+capitals, printed without accents -- fix these by hand):
+  1 Samuel 1:1
+
+NOT filled (left as commented placeholders):
+  1 Samuel 13:1: LXX omits this verse (empty in Swete)
+  1 Samuel 17:12: LXX omits this verse (empty in Swete)
+  1 Samuel 17:13: LXX omits this verse (empty in Swete)
+  1 Samuel 17:14: LXX omits this verse (empty in Swete)
+  1 Samuel 17:15: LXX omits this verse (empty in Swete)
+  1 Samuel 17:16: LXX omits this verse (empty in Swete)
+  1 Samuel 17:17: LXX omits this verse (empty in Swete)
+  1 Samuel 17:18: LXX omits this verse (empty in Swete)
+  1 Samuel 17:19: LXX omits this verse (empty in Swete)
+  1 Samuel 17:20: LXX omits this verse (empty in Swete)
+  1 Samuel 17:21: LXX omits this verse (empty in Swete)
+  1 Samuel 17:22: LXX omits this verse (empty in Swete)
+  1 Samuel 17:23: LXX omits this verse (empty in Swete)
+  1 Samuel 17:24: LXX omits this verse (empty in Swete)
+  1 Samuel 17:25: LXX omits this verse (empty in Swete)
+  1 Samuel 17:26: LXX omits this verse (empty in Swete)
+  1 Samuel 17:27: LXX omits this verse (empty in Swete)
+  1 Samuel 17:28: LXX omits this verse (empty in Swete)
+  1 Samuel 17:29: LXX omits this verse (empty in Swete)
+  1 Samuel 17:30: LXX omits this verse (empty in Swete)
+  1 Samuel 17:31: LXX omits this verse (empty in Swete)
+  1 Samuel 17:41: LXX omits this verse (empty in Swete)
+  1 Samuel 17:50: LXX omits this verse (empty in Swete)
+  1 Samuel 17:55: maps to 1Sa.17:55, but that slot is empty in Swete
+  1 Samuel 17:56: maps to 1Sa.17:56, but that slot is empty in Swete
+  1 Samuel 17:57: maps to 1Sa.17:57, but that slot is empty in Swete
+  1 Samuel 17:58: maps to 1Sa.17:58, but that slot is empty in Swete
+  1 Samuel 18:1: LXX omits this verse (empty in Swete)
+  1 Samuel 18:2: LXX omits this verse (empty in Swete)
+  1 Samuel 18:3: LXX omits this verse (empty in Swete)
+  1 Samuel 18:4: LXX omits this verse (empty in Swete)
+  1 Samuel 18:5: LXX omits this verse (empty in Swete)
+  1 Samuel 18:10: LXX omits this verse (empty in Swete)
+  1 Samuel 18:11: LXX omits this verse (empty in Swete)
+  1 Samuel 18:17: LXX omits this verse (empty in Swete)
+  1 Samuel 18:18: LXX omits this verse (empty in Swete)
+  1 Samuel 18:19: LXX omits this verse (empty in Swete)
+  1 Samuel 18:30: maps to 1Sa.18:30, but that slot is empty in Swete
+  1 Samuel 20:16: LXX omits this verse (empty in Swete)
+  1 Samuel 23:12: LXX omits this verse (empty in Swete)
+
+Verses that already had LXX text (not modified):
+  1 Samuel 15:22

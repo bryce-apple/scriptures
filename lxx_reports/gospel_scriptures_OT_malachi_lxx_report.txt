@@ -1,0 +1,19 @@
+fill_lxx report for gospel_scriptures_OT_malachi.tex
+Output written to: gospel_scriptures_OT_malachi_lxx.tex
+
+Placeholders filled:        52
+Already filled (untouched): 3
+Not fillable:               0
+
+Filled via a versification remap (KJV ref -> different LXX ref);
+worth spot-checking these:
+  Malachi 4:6  <-  LXX Mal.4:4
+
+Filled but start with ALL-CAPS words (Swete's decorative opening
+capitals, printed without accents -- fix these by hand):
+  Malachi 1:1
+
+Verses that already had LXX text (not modified):
+  Malachi 3:10
+  Malachi 4:4
+  Malachi 4:5

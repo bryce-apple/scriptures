@@ -1,0 +1,34 @@
+fill_lxx report for gospel_scriptures_OT_daniel.tex
+Output written to: gospel_scriptures_OT_daniel_lxx.tex
+
+Placeholders filled:        337
+Already filled (untouched): 1
+Not fillable:               19
+
+Filled but start with ALL-CAPS words (Swete's decorative opening
+capitals, printed without accents -- fix these by hand):
+  Daniel 1:1
+
+NOT filled (left as commented placeholders):
+  Daniel 4:3: LXX omits this verse (empty in Swete)
+  Daniel 4:4: LXX omits this verse (empty in Swete)
+  Daniel 4:5: LXX omits this verse (empty in Swete)
+  Daniel 4:6: LXX omits this verse (empty in Swete)
+  Daniel 4:31: LXX omits this verse (empty in Swete)
+  Daniel 4:32: LXX omits this verse (empty in Swete)
+  Daniel 4:35: no LXX verse (absent from Swete, no mapping)
+  Daniel 4:36: no LXX verse (absent from Swete, no mapping)
+  Daniel 4:37: no LXX verse (absent from Swete, no mapping)
+  Daniel 5:14: LXX omits this verse (empty in Swete)
+  Daniel 5:15: LXX omits this verse (empty in Swete)
+  Daniel 5:18: LXX omits this verse (empty in Swete)
+  Daniel 5:19: LXX omits this verse (empty in Swete)
+  Daniel 5:20: LXX omits this verse (empty in Swete)
+  Daniel 5:21: LXX omits this verse (empty in Swete)
+  Daniel 5:22: LXX omits this verse (empty in Swete)
+  Daniel 5:24: LXX omits this verse (empty in Swete)
+  Daniel 5:25: LXX omits this verse (empty in Swete)
+  Daniel 6:8: LXX omits this verse (empty in Swete)
+
+Verses that already had LXX text (not modified):
+  Daniel 7:14

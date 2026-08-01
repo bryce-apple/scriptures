@@ -1,0 +1,34 @@
+fill_lxx report for gospel_scriptures_OT_joshua.tex
+Output written to: gospel_scriptures_OT_joshua_lxx.tex
+
+Placeholders filled:        649
+Already filled (untouched): 0
+Not fillable:               9
+
+Filled via a versification remap (KJV ref -> different LXX ref);
+worth spot-checking these:
+  Joshua 8:30  <-  LXX Jos.9:2
+  Joshua 8:31  <-  LXX Jos.9:2
+  Joshua 8:32  <-  LXX Jos.9:2
+  Joshua 8:33  <-  LXX Jos.9:2
+  Joshua 8:34  <-  LXX Jos.9:2
+  Joshua 8:35  <-  LXX Jos.9:2
+  Joshua 24:29  <-  LXX Jos.24:30
+  Joshua 24:30  <-  LXX Jos.24:31
+  Joshua 24:31  <-  LXX Jos.24:29
+
+Filled but start with ALL-CAPS words (Swete's decorative opening
+capitals, printed without accents -- fix these by hand):
+  Joshua 1:1
+
+NOT filled (left as commented placeholders):
+  Joshua 8:13: LXX omits this verse (empty in Swete)
+  Joshua 8:26: LXX omits this verse (empty in Swete)
+  Joshua 10:15: LXX omits this verse (empty in Swete)
+  Joshua 10:43: maps to Jos.10:43, but that slot is empty in Swete
+  Joshua 12:22: LXX omits this verse (empty in Swete)
+  Joshua 13:33: maps to Jos.13:33, but that slot is empty in Swete
+  Joshua 20:4: LXX omits this verse (empty in Swete)
+  Joshua 20:5: LXX omits this verse (empty in Swete)
+  Joshua 20:6: LXX omits this verse (empty in Swete)
+

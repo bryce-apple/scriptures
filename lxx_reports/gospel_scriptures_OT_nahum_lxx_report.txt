@@ -1,0 +1,26 @@
+fill_lxx report for gospel_scriptures_OT_nahum.tex
+Output written to: gospel_scriptures_OT_nahum_lxx.tex
+
+Placeholders filled:        47
+Already filled (untouched): 0
+Not fillable:               0
+
+Filled via a versification remap (KJV ref -> different LXX ref);
+worth spot-checking these:
+  Nahum 2:2  <-  LXX Nah.2:3
+  Nahum 2:3  <-  LXX Nah.2:4
+  Nahum 2:4  <-  LXX Nah.2:5
+  Nahum 2:5  <-  LXX Nah.2:6
+  Nahum 2:6  <-  LXX Nah.2:7
+  Nahum 2:7  <-  LXX Nah.2:8
+  Nahum 2:8  <-  LXX Nah.2:9
+  Nahum 2:9  <-  LXX Nah.2:10
+  Nahum 2:10  <-  LXX Nah.2:11
+  Nahum 2:11  <-  LXX Nah.2:12
+  Nahum 2:12  <-  LXX Nah.2:13
+  Nahum 2:13  <-  LXX Nah.2:14
+
+Filled but start with ALL-CAPS words (Swete's decorative opening
+capitals, printed without accents -- fix these by hand):
+  Nahum 1:1
+

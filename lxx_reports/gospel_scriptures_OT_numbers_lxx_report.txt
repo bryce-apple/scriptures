@@ -1,0 +1,121 @@
+fill_lxx report for gospel_scriptures_OT_numbers.tex
+Output written to: gospel_scriptures_OT_numbers_lxx.tex
+
+Placeholders filled:        1287
+Already filled (untouched): 1
+Not fillable:               0
+
+Filled via a versification remap (KJV ref -> different LXX ref);
+worth spot-checking these:
+  Numbers 1:24  <-  LXX Num.1:36
+  Numbers 1:25  <-  LXX Num.1:37
+  Numbers 1:26  <-  LXX Num.1:24
+  Numbers 1:27  <-  LXX Num.1:25
+  Numbers 1:28  <-  LXX Num.1:26
+  Numbers 1:29  <-  LXX Num.1:27
+  Numbers 1:30  <-  LXX Num.1:28
+  Numbers 1:31  <-  LXX Num.1:29
+  Numbers 1:32  <-  LXX Num.1:30
+  Numbers 1:33  <-  LXX Num.1:31
+  Numbers 1:34  <-  LXX Num.1:32
+  Numbers 1:35  <-  LXX Num.1:33
+  Numbers 1:36  <-  LXX Num.1:34
+  Numbers 1:37  <-  LXX Num.1:35
+  Numbers 6:24  <-  LXX Num.6:27
+  Numbers 6:25  <-  LXX Num.6:24
+  Numbers 6:26  <-  LXX Num.6:25
+  Numbers 6:27  <-  LXX Num.6:26
+  Numbers 10:34  <-  LXX Num.10:36
+  Numbers 10:35  <-  LXX Num.10:34
+  Numbers 10:36  <-  LXX Num.10:35
+  Numbers 12:16  <-  LXX Num.13:1
+  Numbers 13:1  <-  LXX Num.13:2
+  Numbers 13:2  <-  LXX Num.13:3
+  Numbers 13:3  <-  LXX Num.13:4
+  Numbers 13:4  <-  LXX Num.13:5
+  Numbers 13:5  <-  LXX Num.13:6
+  Numbers 13:6  <-  LXX Num.13:7
+  Numbers 13:7  <-  LXX Num.13:8
+  Numbers 13:8  <-  LXX Num.13:9
+  Numbers 13:9  <-  LXX Num.13:10
+  Numbers 13:10  <-  LXX Num.13:11
+  Numbers 13:11  <-  LXX Num.13:12
+  Numbers 13:12  <-  LXX Num.13:13
+  Numbers 13:13  <-  LXX Num.13:14
+  Numbers 13:14  <-  LXX Num.13:15
+  Numbers 13:15  <-  LXX Num.13:16
+  Numbers 13:16  <-  LXX Num.13:17
+  Numbers 13:17  <-  LXX Num.13:18
+  Numbers 13:18  <-  LXX Num.13:19
+  Numbers 13:19  <-  LXX Num.13:20
+  Numbers 13:20  <-  LXX Num.13:21
+  Numbers 13:21  <-  LXX Num.13:22
+  Numbers 13:22  <-  LXX Num.13:23
+  Numbers 13:23  <-  LXX Num.13:24
+  Numbers 13:24  <-  LXX Num.13:25
+  Numbers 13:25  <-  LXX Num.13:26
+  Numbers 13:26  <-  LXX Num.13:27
+  Numbers 13:27  <-  LXX Num.13:28
+  Numbers 13:28  <-  LXX Num.13:29
+  Numbers 13:29  <-  LXX Num.13:30
+  Numbers 13:30  <-  LXX Num.13:31
+  Numbers 13:31  <-  LXX Num.13:32
+  Numbers 13:32  <-  LXX Num.13:33
+  Numbers 13:33  <-  LXX Num.13:34
+  Numbers 26:15  <-  LXX Num.26:24
+  Numbers 26:16  <-  LXX Num.26:25
+  Numbers 26:17  <-  LXX Num.26:26
+  Numbers 26:18  <-  LXX Num.26:27
+  Numbers 26:19  <-  LXX Num.26:15
+  Numbers 26:20  <-  LXX Num.26:16
+  Numbers 26:21  <-  LXX Num.26:17
+  Numbers 26:22  <-  LXX Num.26:18
+  Numbers 26:23  <-  LXX Num.26:19
+  Numbers 26:24  <-  LXX Num.26:20
+  Numbers 26:25  <-  LXX Num.26:21
+  Numbers 26:26  <-  LXX Num.26:22
+  Numbers 26:27  <-  LXX Num.26:23
+  Numbers 26:28  <-  LXX Num.26:32
+  Numbers 26:29  <-  LXX Num.26:33
+  Numbers 26:30  <-  LXX Num.26:34
+  Numbers 26:31  <-  LXX Num.26:35
+  Numbers 26:32  <-  LXX Num.26:36
+  Numbers 26:33  <-  LXX Num.26:37
+  Numbers 26:34  <-  LXX Num.26:38
+  Numbers 26:35  <-  LXX Num.26:39
+  Numbers 26:36  <-  LXX Num.26:40
+  Numbers 26:37  <-  LXX Num.26:41
+  Numbers 26:38  <-  LXX Num.26:42
+  Numbers 26:39  <-  LXX Num.26:43
+  Numbers 26:40  <-  LXX Num.26:44
+  Numbers 26:41  <-  LXX Num.26:45
+  Numbers 26:42  <-  LXX Num.26:46
+  Numbers 26:43  <-  LXX Num.26:47
+  Numbers 26:44  <-  LXX Num.26:28
+  Numbers 26:45  <-  LXX Num.26:29
+  Numbers 26:46  <-  LXX Num.26:30
+  Numbers 26:47  <-  LXX Num.26:31
+  Numbers 29:40  <-  LXX Num.30:1
+  Numbers 30:1  <-  LXX Num.30:2
+  Numbers 30:2  <-  LXX Num.30:3
+  Numbers 30:3  <-  LXX Num.30:4
+  Numbers 30:4  <-  LXX Num.30:5
+  Numbers 30:5  <-  LXX Num.30:6
+  Numbers 30:6  <-  LXX Num.30:7
+  Numbers 30:7  <-  LXX Num.30:8
+  Numbers 30:8  <-  LXX Num.30:9
+  Numbers 30:9  <-  LXX Num.30:10
+  Numbers 30:10  <-  LXX Num.30:11
+  Numbers 30:11  <-  LXX Num.30:12
+  Numbers 30:12  <-  LXX Num.30:13
+  Numbers 30:13  <-  LXX Num.30:14
+  Numbers 30:14  <-  LXX Num.30:15
+  Numbers 30:15  <-  LXX Num.30:16
+  Numbers 30:16  <-  LXX Num.30:17
+
+Filled but start with ALL-CAPS words (Swete's decorative opening
+capitals, printed without accents -- fix these by hand):
+  Numbers 1:1
+
+Verses that already had LXX text (not modified):
+  Numbers 12:8

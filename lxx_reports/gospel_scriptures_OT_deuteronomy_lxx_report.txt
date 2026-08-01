@@ -1,0 +1,39 @@
+fill_lxx report for gospel_scriptures_OT_deuteronomy.tex
+Output written to: gospel_scriptures_OT_deuteronomy_lxx.tex
+
+Placeholders filled:        954
+Already filled (untouched): 2
+Not fillable:               3
+
+Filled via a versification remap (KJV ref -> different LXX ref);
+worth spot-checking these:
+  Deuteronomy 5:17  <-  LXX Deu.5:18
+  Deuteronomy 5:18  <-  LXX Deu.5:17
+  Deuteronomy 14:15  <-  LXX Deu.14:14
+  Deuteronomy 14:16  <-  LXX Deu.14:15
+  Deuteronomy 14:17  <-  LXX Deu.14:16
+  Deuteronomy 14:18  <-  LXX Deu.14:17
+  Deuteronomy 14:19  <-  LXX Deu.14:18
+  Deuteronomy 14:20  <-  LXX Deu.14:19
+  Deuteronomy 14:21  <-  LXX Deu.14:20
+  Deuteronomy 14:22  <-  LXX Deu.14:21
+  Deuteronomy 14:23  <-  LXX Deu.14:22
+  Deuteronomy 14:24  <-  LXX Deu.14:23
+  Deuteronomy 14:25  <-  LXX Deu.14:24
+  Deuteronomy 14:26  <-  LXX Deu.14:25
+  Deuteronomy 14:27  <-  LXX Deu.14:26
+  Deuteronomy 14:28  <-  LXX Deu.14:27
+  Deuteronomy 14:29  <-  LXX Deu.14:28
+
+Filled but start with ALL-CAPS words (Swete's decorative opening
+capitals, printed without accents -- fix these by hand):
+  Deuteronomy 1:1
+
+NOT filled (left as commented placeholders):
+  Deuteronomy 23:2: LXX omits this verse (empty in Swete)
+  Deuteronomy 23:12: LXX omits this verse (empty in Swete)
+  Deuteronomy 25:16: LXX omits this verse (empty in Swete)
+
+Verses that already had LXX text (not modified):
+  Deuteronomy 6:16
+  Deuteronomy 32:2

@@ -1,0 +1,37 @@
+fill_lxx report for gospel_scriptures_OT_ecclesiastes.tex
+Output written to: gospel_scriptures_OT_ecclesiastes_lxx.tex
+
+Placeholders filled:        221
+Already filled (untouched): 0
+Not fillable:               1
+
+Filled via a versification remap (KJV ref -> different LXX ref);
+worth spot-checking these:
+  Ecclesiastes 5:1  <-  LXX Ecc.4:17
+  Ecclesiastes 5:2  <-  LXX Ecc.5:1
+  Ecclesiastes 5:3  <-  LXX Ecc.5:2
+  Ecclesiastes 5:4  <-  LXX Ecc.5:3
+  Ecclesiastes 5:5  <-  LXX Ecc.5:4
+  Ecclesiastes 5:6  <-  LXX Ecc.5:5
+  Ecclesiastes 5:7  <-  LXX Ecc.5:6
+  Ecclesiastes 5:8  <-  LXX Ecc.5:7
+  Ecclesiastes 5:9  <-  LXX Ecc.5:8
+  Ecclesiastes 5:10  <-  LXX Ecc.5:9
+  Ecclesiastes 5:11  <-  LXX Ecc.5:10
+  Ecclesiastes 5:12  <-  LXX Ecc.5:11
+  Ecclesiastes 5:13  <-  LXX Ecc.5:12
+  Ecclesiastes 5:14  <-  LXX Ecc.5:13
+  Ecclesiastes 5:15  <-  LXX Ecc.5:14
+  Ecclesiastes 5:16  <-  LXX Ecc.5:15
+  Ecclesiastes 5:17  <-  LXX Ecc.5:16
+  Ecclesiastes 5:18  <-  LXX Ecc.5:17
+  Ecclesiastes 5:19  <-  LXX Ecc.5:18
+  Ecclesiastes 5:20  <-  LXX Ecc.5:19
+
+Filled but start with ALL-CAPS words (Swete's decorative opening
+capitals, printed without accents -- fix these by hand):
+  Ecclesiastes 1:1
+
+NOT filled (left as commented placeholders):
+  Ecclesiastes 6:12: no LXX verse (absent from Swete, no mapping)
+

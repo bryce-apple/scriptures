@@ -1,0 +1,25 @@
+fill_lxx report for gospel_scriptures_OT_jonah.tex
+Output written to: gospel_scriptures_OT_jonah_lxx.tex
+
+Placeholders filled:        48
+Already filled (untouched): 0
+Not fillable:               0
+
+Filled via a versification remap (KJV ref -> different LXX ref);
+worth spot-checking these:
+  Jonah 1:17  <-  LXX Jon.2:1
+  Jonah 2:1  <-  LXX Jon.2:2
+  Jonah 2:2  <-  LXX Jon.2:3
+  Jonah 2:3  <-  LXX Jon.2:4
+  Jonah 2:4  <-  LXX Jon.2:5
+  Jonah 2:5  <-  LXX Jon.2:6
+  Jonah 2:6  <-  LXX Jon.2:7
+  Jonah 2:7  <-  LXX Jon.2:8
+  Jonah 2:8  <-  LXX Jon.2:9
+  Jonah 2:9  <-  LXX Jon.2:10
+  Jonah 2:10  <-  LXX Jon.2:11
+
+Filled but start with ALL-CAPS words (Swete's decorative opening
+capitals, printed without accents -- fix these by hand):
+  Jonah 1:1
+

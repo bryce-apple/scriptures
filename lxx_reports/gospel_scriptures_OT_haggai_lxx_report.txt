@@ -1,0 +1,15 @@
+fill_lxx report for gospel_scriptures_OT_haggai.tex
+Output written to: gospel_scriptures_OT_haggai_lxx.tex
+
+Placeholders filled:        38
+Already filled (untouched): 0
+Not fillable:               0
+
+Filled via a versification remap (KJV ref -> different LXX ref);
+worth spot-checking these:
+  Haggai 1:15  <-  LXX Hag.2:1
+
+Filled but start with ALL-CAPS words (Swete's decorative opening
+capitals, printed without accents -- fix these by hand):
+  Haggai 1:1
+
