@@ -143,7 +143,7 @@ def parse_ref_list(refstring, default_book):
     return out
 
 
-def load_tvtms(tvtms_path, book_codes_needed):
+def load_tvtms(tvtms_path, book_codes_needed, require_greek=True):
     """
     Collect candidate mapping rules from the expanded section of TVTMS.
     Returns {standard (book,ch,vs): [(priority, [greek refs], tests_str)]}
@@ -173,7 +173,7 @@ def load_tvtms(tvtms_path, book_codes_needed):
                 continue
             source_type, source_ref, standard_ref = (
                 parts[0].strip(), parts[1].strip(), parts[2].strip())
-            if 'Greek' not in source_type:
+            if require_greek and 'Greek' not in source_type:
                 continue
             base_m = re.match(r'^(\w+)\.', source_ref)
             if not base_m:

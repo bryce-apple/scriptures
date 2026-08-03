@@ -109,7 +109,10 @@ def parse_files(paths):
 
     for path in paths:
         for raw in open(path, encoding='utf-8'):
-            line = raw.rstrip('\n')
+            # Normalize BEFORE tokenizing: the micro-sign-for-mu font
+            # artifact would otherwise hide verse numbers glued to words
+            # that start with mu (e.g. '14µὴ ἀδυνατεῖ').
+            line = raw.rstrip('\n').replace('µ', 'μ').replace(' ', ' ')
             if not line.strip():
                 continue
             if FOOTER_RE.match(line):

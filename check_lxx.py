@@ -25,7 +25,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).parent))
 from fill_lxx import (BOOK_CODES, SWETE_TO_TVTMS, TVTMS_TO_SWETE,
-                      load_swete, load_tvtms, make_test_evaluator)
+                      load_tvtms, make_test_evaluator)
 
 
 def comparable(text):
@@ -57,11 +57,15 @@ def main():
 
     rahlfs = json.load(open(args.rahlfs_json, encoding='utf-8'))
 
-    # We need Swete's inventory only to evaluate TVTMS tests the same way
-    # fill_lxx.py did, so the same mapping rules win here as won there.
-    swete = load_swete(str(here / '01-Swete_word_with_punctuations.csv'),
-                       str(here / '00-Swete_versification.csv'))
-    test_ok = make_test_evaluator(swete)
+    # Evaluate TVTMS tests against the inventory of the edition we are
+    # comparing AGAINST (the Rahlfs JSON), so its own numbering conventions
+    # decide which mapping rules apply -- same logic as plan_rahlfs.py.
+    inventory = {}
+    for book, chapters in rahlfs.items():
+        for ch, verses in chapters.items():
+            for vs, text in verses.items():
+                inventory[(book, int(ch), int(vs))] = text
+    test_ok = make_test_evaluator(inventory)
 
     verse_head_re = re.compile(r'\\paragraph\{((?:\d\s)?[A-Za-z ]+?)\s+(\d+):(\d+)')
     lxx_line_re = re.compile(r'^\s*\\item\[LXX\]\s*\\gr\{(.*)\}\s*$')
@@ -70,7 +74,8 @@ def main():
     books = {BOOK_CODES[m.group(1).strip()]
              for line in lines for m in [verse_head_re.search(line)]
              if m and m.group(1).strip() in BOOK_CODES}
-    tvtms = load_tvtms(tvtms_path, {SWETE_TO_TVTMS[b] for b in books})
+    tvtms = load_tvtms(tvtms_path, {SWETE_TO_TVTMS[b] for b in books},
+                       require_greek=False)
 
     def rahlfs_lookup(book_code, ch, vs):
         """Map a KJV ref to Greek numbering, then look up the Rahlfs JSON."""

@@ -8,3 +8,5 @@ gospel.pdf
 TVTMS.txt
 __pycache__/
 rahlfs.json
+*_plan.tsv
+*_rahlfs.tex
