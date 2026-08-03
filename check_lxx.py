@@ -45,6 +45,11 @@ def main():
     ap.add_argument('--swete-words', default=None)  # unused, kept for symmetry
     ap.add_argument('--threshold', type=float, default=0.98,
                     help='similarity below this is reported (default 0.98)')
+    ap.add_argument('--deep', action='store_true',
+                    help='mapping-free reverse audit: for every verse that '
+                         'does not match its assigned text well, search the '
+                         'whole book in the JSON for where the text actually '
+                         'lives, and report disagreements with the mapping')
     args = ap.parse_args()
 
     here = Path(__file__).parent
@@ -78,25 +83,28 @@ def main():
                        require_greek=False)
 
     def rahlfs_lookup(book_code, ch, vs):
-        """Map a KJV ref to Greek numbering, then look up the Rahlfs JSON."""
+        """Map a KJV ref to Greek numbering; return (text, [refs used])."""
         std = (SWETE_TO_TVTMS.get(book_code), ch, vs)
         for prio, src_refs, tests in sorted(tvtms.get(std, []), key=lambda c: -c[0]):
             if not test_ok(tests):
                 continue
-            texts = []
+            texts, used = [], []
             for (gb, gch, gvs) in src_refs:
                 b = TVTMS_TO_SWETE.get(gb, gb)
                 t = rahlfs.get(b, {}).get(str(gch), {}).get(str(gvs))
                 if t:
                     texts.append(t)
+                    used.append(f"{b}.{gch}:{gvs}")
             if texts:
-                return ' '.join(texts)
-        return rahlfs.get(book_code, {}).get(str(ch), {}).get(str(vs))
+                return ' '.join(texts), used
+        t = rahlfs.get(book_code, {}).get(str(ch), {}).get(str(vs))
+        return t, ([f"{book_code}.{ch}:{vs}"] if t else [])
 
     current = None
     compared = missing_rahlfs = 0
     results = []
     shift_hits = {}
+    deep_queue = []
     for line in lines:
         m = verse_head_re.search(line)
         if m and m.group(1).strip() in BOOK_CODES:
@@ -110,15 +118,18 @@ def main():
             tex_text = lm.group(1)
             if tex_text.strip() == '---':
                 continue  # empty-verse marker, nothing to compare
-            r_text = rahlfs_lookup(code, ch, vs)
+            r_text, assigned_refs = rahlfs_lookup(code, ch, vs)
             if not r_text:
                 missing_rahlfs += 1
+                deep_queue.append((ref, code, tex_text, None, [], 0.0))
                 continue
             compared += 1
             ratio = difflib.SequenceMatcher(
                 None, comparable(tex_text), comparable(r_text)).ratio()
             if ratio < args.threshold:
                 results.append((ratio, ref, tex_text, r_text))
+            if ratio < 0.95:
+                deep_queue.append((ref, code, tex_text, r_text, assigned_refs, ratio))
 
             # Independent shift detector: does a NEIGHBORING verse in the
             # JSON match this .tex verse much better than the assigned one?
@@ -144,6 +155,46 @@ def main():
         out.append(f"  in .tex:    {tex_text}")
         out.append(f"  Rahlfs:     {r_text}")
         out.append("")
+    # ----- deep audit: find where each poorly-matching text actually lives
+    if args.deep and deep_queue:
+        deep_out = []
+        # word-set index per book for fast candidate filtering
+        book_index = {}
+        for (b, ch, vs), t in inventory.items():
+            if t.strip():
+                book_index.setdefault(b, []).append(
+                    ((ch, vs), comparable(t), set(comparable(t).split())))
+        for ref, code, tex_text, r_text, assigned_refs, ratio in deep_queue:
+            ct = comparable(tex_text)
+            words = set(ct.split())
+            cands = book_index.get(code, [])
+            scored = sorted(cands, key=lambda c: -len(words & c[2]) / (len(words | c[2]) or 1))[:5]
+            best_ref, best_ratio = None, 0.0
+            for (cv, ctext, _) in scored:
+                rr = difflib.SequenceMatcher(None, ct, ctext).ratio()
+                if rr > best_ratio:
+                    best_ref, best_ratio = cv, rr
+            implied = f"{code}.{best_ref[0]}:{best_ref[1]}" if best_ref else None
+            if implied and best_ratio >= 0.75 and best_ratio > ratio + 0.1 \
+                    and implied not in assigned_refs:
+                deep_out.append(f"  {ref}: text actually matches {implied} "
+                                f"(similarity {best_ratio:.2f}) but mapping assigned "
+                                f"{'+'.join(assigned_refs) or '(nothing)'} "
+                                f"(similarity {ratio:.2f})")
+            elif not implied or best_ratio < 0.5:
+                deep_out.append(f"  {ref}: text found NOWHERE in the JSON for this book "
+                                f"(best candidate similarity {best_ratio:.2f}) -- "
+                                f"paste gap or foreign text?")
+        if deep_out:
+            out.append("!!! DEEP AUDIT (mapping-free reverse search) !!!")
+            out.extend(deep_out)
+            out.append("")
+        else:
+            out.append("Deep audit: every poorly-matching verse was checked against the")
+            out.append("whole book; no better location found (differences are textual,")
+            out.append("not positional).")
+            out.append("")
+
     suspicious = {k: v for k, v in shift_hits.items() if len(v) >= 3}
     if suspicious:
         out.append("!!! POSSIBLE SYSTEMATIC SHIFTS (mapping may be wrong) !!!")
