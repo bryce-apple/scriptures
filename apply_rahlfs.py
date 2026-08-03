@@ -8,7 +8,8 @@ and produces a copy of the .tex with the Greek applied:
     text (replacing Swete or whatever was there)
   - 'fill' rows: the commented "% \\item[LXX] \\gr{}" placeholder becomes an
     active line with the Rahlfs text
-  - 'skip' rows: the line is left exactly as it is
+  - 'empty' rows: the line becomes \item[LXX] \gr{---}, showing that the
+    Rahlfs edition has no verse at this location
 
 Everything else in the file is untouched; CRLF line endings are preserved.
 
@@ -61,7 +62,7 @@ def main():
         kjv_ref, state, action, refs = parts[0], parts[1], parts[2], parts[3]
         note = parts[4] if len(parts) > 4 else ''
         plan[kjv_ref] = (action, [r for r in refs.split('+') if r], state, note)
-        if action == 'skip':
+        if action == 'empty':
             skips.append((kjv_ref, state, note))
 
     def text_for(refs):
@@ -111,8 +112,11 @@ def main():
                 filled += 1
                 continue
 
-        if (fm or pm) and action == 'skip':
+        if (fm or pm) and action == 'empty':
+            indent = (fm or pm).group(1)
+            out_lines.append(f"{indent}\\item[LXX] \\gr{{---}}{eol}")
             skipped += 1
+            continue
         out_lines.append(line)
 
     with open(out_path, 'w', encoding='utf-8', newline='') as f:
@@ -136,9 +140,9 @@ def main():
     rep.append("")
     rep.append(f"Filled empty placeholders: {filled}")
     rep.append(f"Replaced existing lines:   {replaced}")
-    rep.append(f"Left untouched (skipped):  {skipped}")
+    rep.append(f"Marked empty with ---:     {skipped}")
     rep.append("")
-    rep.append("=== NOT put in (still empty / unchanged) ===")
+    rep.append("=== No Rahlfs verse: marked with \\gr{---} ===")
     if skips:
         for ref, state, note in skips:
             rep.append(f"  {ref} ({state}): {note}")
@@ -182,7 +186,7 @@ def main():
     print(f"Wrote {out_path}")
     print(f"  replaced: {replaced}")
     print(f"  filled:   {filled}")
-    print(f"  skipped:  {skipped}")
+    print(f"  marked empty (---): {skipped}")
     print(f"Review report: {report_path}")
 
 

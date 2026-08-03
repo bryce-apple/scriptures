@@ -108,6 +108,8 @@ def main():
         if lm and current:
             ref, code, ch, vs = current
             tex_text = lm.group(1)
+            if tex_text.strip() == '---':
+                continue  # empty-verse marker, nothing to compare
             r_text = rahlfs_lookup(code, ch, vs)
             if not r_text:
                 missing_rahlfs += 1

@@ -10,7 +10,8 @@ until you run apply_rahlfs.py with this plan.
 
 Columns:  kjv_ref | tex_state | action | rahlfs_refs | note
   tex_state: 'filled' (an active \\item[LXX] line exists) or 'placeholder'
-  action:    'replace' / 'fill' / 'skip'
+  action:    'replace' / 'fill' / 'empty' ('empty' = no Rahlfs verse; the
+             spot gets \item[LXX] \gr{---} to show the edition omits it)
 
 The end of the report lists JSON verses no .tex verse claimed (LXX-only
 material) and .tex verses with no Rahlfs text (edition omissions).
@@ -122,11 +123,13 @@ def main():
             if texts:
                 action = 'replace' if state == 'filled' else 'fill'
             else:
-                action = 'skip'
+                # No Rahlfs verse here: mark the spot with \gr{---} so the
+                # document shows the edition is genuinely empty there.
+                action = 'empty'
             rows.append((ref, state, action, '+'.join(refs), note))
 
     unclaimed = sorted(set(inventory) - claimed)
-    missing = [r for r in rows if r[2] == 'skip']
+    missing = [r for r in rows if r[2] == 'empty']
 
     with open(out_path, 'w', encoding='utf-8') as f:
         f.write("# plan for %s from %s\n" % (tex_path.name, args.rahlfs_json))
@@ -143,7 +146,7 @@ def main():
     print(f"Plan written to {out_path}")
     print(f"  replace existing LXX line: {n_replace}")
     print(f"  fill empty placeholder:    {n_fill}")
-    print(f"  skip (no Rahlfs text):     {len(missing)}")
+    print(f"  mark empty (---):          {len(missing)}")
     print(f"  of which remapped refs:    {n_remap}")
     if missing:
         print("\nVerses with no Rahlfs text:")
