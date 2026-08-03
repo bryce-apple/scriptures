@@ -96,6 +96,7 @@ def main():
     current = None
     compared = missing_rahlfs = 0
     results = []
+    shift_hits = {}
     for line in lines:
         m = verse_head_re.search(line)
         if m and m.group(1).strip() in BOOK_CODES:
@@ -117,6 +118,19 @@ def main():
             if ratio < args.threshold:
                 results.append((ratio, ref, tex_text, r_text))
 
+            # Independent shift detector: does a NEIGHBORING verse in the
+            # JSON match this .tex verse much better than the assigned one?
+            # (Catches systematic off-by-one mapping errors, which the main
+            # comparison cannot see because it uses the same mapping.)
+            for d in (-1, 1):
+                n_text = rahlfs.get(code, {}).get(str(ch), {}).get(str(vs + d))
+                if not n_text:
+                    continue
+                n_ratio = difflib.SequenceMatcher(
+                    None, comparable(tex_text), comparable(n_text)).ratio()
+                if n_ratio > ratio + 0.15 and n_ratio > 0.8:
+                    shift_hits.setdefault((code, ch), []).append((vs, d))
+
     results.sort()
     out = []
     out.append(f"Compared {compared} verses "
@@ -127,6 +141,16 @@ def main():
         out.append(f"--- {ref}  (similarity {ratio:.2f})")
         out.append(f"  in .tex:    {tex_text}")
         out.append(f"  Rahlfs:     {r_text}")
+        out.append("")
+    suspicious = {k: v for k, v in shift_hits.items() if len(v) >= 3}
+    if suspicious:
+        out.append("!!! POSSIBLE SYSTEMATIC SHIFTS (mapping may be wrong) !!!")
+        out.append("A neighboring JSON verse matches these .tex verses much better")
+        out.append("than the assigned one -- check the chapter against the PDF:")
+        for (code, ch), hits in sorted(suspicious.items()):
+            ds = {d for _, d in hits}
+            out.append(f"  {code} chapter {ch}: {len(hits)} verses match better at "
+                       f"offset {'/'.join('%+d' % d for d in sorted(ds))}")
         out.append("")
     report = "\n".join(out)
     print(report)

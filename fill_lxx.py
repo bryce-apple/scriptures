@@ -213,11 +213,34 @@ def make_test_evaluator(swete):
 
     ref_re = re.compile(r'^(\w+)\.(\d+):(\d+)$')
 
+    def resolve(refstr):
+        rm = ref_re.match(refstr)
+        if not rm:
+            return None
+        book, ch, vs = rm.group(1), int(rm.group(2)), int(rm.group(3))
+        return (tvtms_upper.get(book.upper(), book), ch, vs)
+
     def evaluate(tests_str):
         if not tests_str:
             return True
         for cond in tests_str.split('&'):
             cond = cond.strip()
+
+            # Verse-length comparisons like 'Exo.25:33<Exo.25:34' -- TVTMS
+            # uses these to tell numbering conventions apart. Evaluate by
+            # comparing text lengths in the edition's inventory.
+            cm = re.match(r'^(\S+?)([<>])(\S+)$', cond)
+            if cm and '=' not in cond:
+                a = resolve(cm.group(1))
+                b = resolve(cm.group(3))
+                if a and b and a in swete and b in swete:
+                    la, lb = len(swete[a].strip()), len(swete[b].strip())
+                    if cm.group(2) == '<' and not la < lb:
+                        return False
+                    if cm.group(2) == '>' and not la > lb:
+                        return False
+                continue
+
             m = re.match(r'^(\S+)=(Exist|NotExist|Last)$', cond)
             if not m:
                 continue  # unevaluable condition type -> don't veto
