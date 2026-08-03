@@ -129,6 +129,14 @@ def main():
         return (ref.rsplit(' ', 1)[0], int(m.group(1)), int(m.group(2))) if m else (ref, 0, 0)
 
     manual = sorted((r for r, p in plan.items() if p[0] == 'manual'), key=ref_key)
+    # Same Rahlfs verse assigned to several document verses: usually a sign
+    # the correspondence is loose (TVTMS 'nearest verse'), not genuine.
+    source_uses = {}
+    for r, p in plan.items():
+        for ref in p[1]:
+            source_uses.setdefault(ref, []).append(r)
+    reused = sorted(((src_ref, sorted(users, key=ref_key))
+                     for src_ref, users in source_uses.items() if len(users) > 1))
     remapped = sorted(((r, p[1]) for r, p in plan.items() if p[3] == 'remapped'),
                       key=lambda x: ref_key(x[0]))
     multi = sorted(((r, p[1]) for r, p in plan.items() if len(p[1]) > 1),
@@ -165,6 +173,15 @@ def main():
     if remapped:
         for ref, refs in remapped:
             rep.append(f"  {ref}  <-  {'+'.join(refs)}")
+    else:
+        rep.append("  (none)")
+    rep.append("")
+    rep.append("=== CHECK BY HAND: same Rahlfs verse used for several verses ===")
+    rep.append("(repeated Greek text usually means the LXX has no true counterpart")
+    rep.append(" for some of these -- consider changing the extras to \\gr{---})")
+    if reused:
+        for src_ref, users in reused:
+            rep.append(f"  {src_ref}  ->  {', '.join(users)}")
     else:
         rep.append("  (none)")
     rep.append("")
