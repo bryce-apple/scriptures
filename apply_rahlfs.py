@@ -128,6 +128,7 @@ def main():
         m = re.search(r'(\d+):(\d+)$', ref)
         return (ref.rsplit(' ', 1)[0], int(m.group(1)), int(m.group(2))) if m else (ref, 0, 0)
 
+    manual = sorted((r for r, p in plan.items() if p[0] == 'manual'), key=ref_key)
     remapped = sorted(((r, p[1]) for r, p in plan.items() if p[3] == 'remapped'),
                       key=lambda x: ref_key(x[0]))
     multi = sorted(((r, p[1]) for r, p in plan.items() if len(p[1]) > 1),
@@ -146,6 +147,15 @@ def main():
     if skips:
         for ref, state, note in skips:
             rep.append(f"  {ref} ({state}): {note}")
+    else:
+        rep.append("  (none)")
+    rep.append("")
+    rep.append("=== CHECK BY HAND: commented LXX lines that already contain text ===")
+    rep.append("(left untouched; uncomment/replace these yourself, or empty the")
+    rep.append(" \\gr{} braces and re-run to have the pipeline fill them)")
+    if manual:
+        for ref in manual:
+            rep.append(f"  {ref}")
     else:
         rep.append("  (none)")
     rep.append("")

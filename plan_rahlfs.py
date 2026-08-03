@@ -62,6 +62,7 @@ def main():
     verse_head_re = re.compile(r'\\paragraph\{((?:\d\s)?[A-Za-z ]+?)\s+(\d+):(\d+)')
     lxx_filled_re = re.compile(r'^\s*\\item\[LXX\]\s*\\gr\{.*\}\s*$')
     lxx_placeholder_re = re.compile(r'^\s*(?:%\s*)+\\item\[LXX\]\s*\\gr\{\}\s*$')
+    lxx_commented_text_re = re.compile(r'^\s*(?:%\s*)+\\item\[LXX\]\s*\\gr\{.+\}\s*$')
 
     lines = open(tex_path, encoding='utf-8', newline='').readlines()
     books = {BOOK_CODES[m.group(1).strip()]
@@ -113,6 +114,12 @@ def main():
             state = 'filled'
         elif lxx_placeholder_re.match(line):
             state = 'placeholder'
+        elif lxx_commented_text_re.match(line):
+            # A commented-out LXX line that already holds text: too
+            # ambiguous to touch automatically -- flag for hand review.
+            rows.append((current[0], 'commented-text', 'manual', '',
+                         'commented LXX line already contains text -- left untouched'))
+            continue
         if state:
             ref, code, ch, vs = current
             refs, texts, note = rahlfs_for(code, ch, vs)
@@ -128,7 +135,7 @@ def main():
                 action = 'empty'
             rows.append((ref, state, action, '+'.join(refs), note))
 
-    unclaimed = sorted(set(inventory) - claimed)
+    unclaimed = sorted((k for k in set(inventory) - claimed if k[0] in books))
     missing = [r for r in rows if r[2] == 'empty']
 
     with open(out_path, 'w', encoding='utf-8') as f:
@@ -143,11 +150,14 @@ def main():
     n_replace = sum(1 for r in rows if r[2] == 'replace')
     n_fill = sum(1 for r in rows if r[2] == 'fill')
     n_remap = sum(1 for r in rows if r[4] == 'remapped')
+    n_manual = sum(1 for r in rows if r[2] == 'manual')
     print(f"Plan written to {out_path}")
     print(f"  replace existing LXX line: {n_replace}")
     print(f"  fill empty placeholder:    {n_fill}")
     print(f"  mark empty (---):          {len(missing)}")
     print(f"  of which remapped refs:    {n_remap}")
+    if n_manual:
+        print(f"  left for hand review:      {n_manual} (commented LXX lines with text)")
     if missing:
         print("\nVerses with no Rahlfs text:")
         for ref, state, action, refs, note in missing:
