@@ -12,6 +12,10 @@ and produces a copy of the .tex with the Greek applied:
 
 Everything else in the file is untouched; CRLF line endings are preserved.
 
+Also writes <texfile>_report.txt: everything that was NOT filled and every
+verse worth checking by hand (remapped references, multi-verse
+concatenations, lines that already had text and were overwritten).
+
 Usage:
     python3 apply_rahlfs.py gospel_scriptures_OT_genesis.tex \\
             gospel_scriptures_OT_genesis_plan.tsv rahlfs.json
@@ -41,16 +45,24 @@ def main():
 
     rahlfs = json.load(open(args.rahlfs_json, encoding='utf-8'))
 
-    # plan: kjv_ref -> (action, [rahlfs refs])
+    # plan: kjv_ref -> (action, [rahlfs refs], state, note)
     plan = {}
+    unclaimed = []
+    skips = []
     for line in open(args.plan, encoding='utf-8'):
+        if line.startswith('# unclaimed\t'):
+            unclaimed.append(line.split('\t')[1].strip())
+            continue
         if line.startswith('#') or not line.strip():
             continue
         parts = line.rstrip('\n').split('\t')
         if len(parts) < 4:
             continue
         kjv_ref, state, action, refs = parts[0], parts[1], parts[2], parts[3]
-        plan[kjv_ref] = (action, [r for r in refs.split('+') if r])
+        note = parts[4] if len(parts) > 4 else ''
+        plan[kjv_ref] = (action, [r for r in refs.split('+') if r], state, note)
+        if action == 'skip':
+            skips.append((kjv_ref, state, note))
 
     def text_for(refs):
         out = []
@@ -80,7 +92,7 @@ def main():
             out_lines.append(line)
             continue
 
-        action, refs = plan.get(current_ref, (None, []))
+        action, refs, state, note = plan.get(current_ref, (None, [], '', ''))
 
         fm = lxx_filled_re.match(line)
         if fm and action == 'replace':
@@ -106,10 +118,72 @@ def main():
     with open(out_path, 'w', encoding='utf-8', newline='') as f:
         f.write(''.join(out_lines))
 
+    # ----- review report: what was NOT put in, and what to check by hand -----
+    report_path = tex_path.with_name(tex_path.stem + '_report.txt')
+    def ref_key(ref):
+        m = re.search(r'(\d+):(\d+)$', ref)
+        return (ref.rsplit(' ', 1)[0], int(m.group(1)), int(m.group(2))) if m else (ref, 0, 0)
+
+    remapped = sorted(((r, p[1]) for r, p in plan.items() if p[3] == 'remapped'),
+                      key=lambda x: ref_key(x[0]))
+    multi = sorted(((r, p[1]) for r, p in plan.items() if len(p[1]) > 1),
+                   key=lambda x: ref_key(x[0]))
+    overwritten = sorted((r for r, p in plan.items()
+                          if p[0] == 'replace' and p[2] == 'filled'), key=ref_key)
+    rep = []
+    rep.append(f"apply_rahlfs report for {tex_path.name}")
+    rep.append(f"Output: {out_path.name}")
+    rep.append("")
+    rep.append(f"Filled empty placeholders: {filled}")
+    rep.append(f"Replaced existing lines:   {replaced}")
+    rep.append(f"Left untouched (skipped):  {skipped}")
+    rep.append("")
+    rep.append("=== NOT put in (still empty / unchanged) ===")
+    if skips:
+        for ref, state, note in skips:
+            rep.append(f"  {ref} ({state}): {note}")
+    else:
+        rep.append("  (none)")
+    rep.append("")
+    rep.append("=== CHECK BY HAND: filled from a remapped reference ===")
+    rep.append("(the verse number in your document differs from the Rahlfs one;")
+    rep.append(" confirm against the printed edition)")
+    if remapped:
+        for ref, refs in remapped:
+            rep.append(f"  {ref}  <-  {'+'.join(refs)}")
+    else:
+        rep.append("  (none)")
+    rep.append("")
+    rep.append("=== CHECK BY HAND: built from more than one Rahlfs verse ===")
+    if multi:
+        for ref, refs in multi:
+            rep.append(f"  {ref}  <-  {'+'.join(refs)}")
+    else:
+        rep.append("  (none)")
+    rep.append("")
+    rep.append("=== CHECK BY HAND: lines that already had text and were overwritten ===")
+    if overwritten:
+        for ref in overwritten:
+            rep.append(f"  {ref}")
+    else:
+        rep.append("  (none)")
+    rep.append("")
+    rep.append("=== Rahlfs verses no verse in this file claimed (LXX-only material) ===")
+    if unclaimed:
+        for ref in unclaimed:
+            rep.append(f"  {ref}")
+    else:
+        rep.append("  (none)")
+    rep.append("")
+    rep.append("Final step: run check_lxx.py on the output file and review any")
+    rep.append("verse it lists -- those are text differences, not just numbering.")
+    Path(report_path).write_text('\n'.join(rep) + '\n', encoding='utf-8')
+
     print(f"Wrote {out_path}")
     print(f"  replaced: {replaced}")
     print(f"  filled:   {filled}")
     print(f"  skipped:  {skipped}")
+    print(f"Review report: {report_path}")
 
 
 if __name__ == '__main__':

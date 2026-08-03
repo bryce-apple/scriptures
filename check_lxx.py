@@ -118,15 +118,21 @@ def main():
                 results.append((ratio, ref, tex_text, r_text))
 
     results.sort()
-    print(f"Compared {compared} verses "
-          f"({missing_rahlfs} in the .tex had no Rahlfs entry to check against)")
-    print(f"Verses below similarity {args.threshold}: {len(results)}")
-    print()
+    out = []
+    out.append(f"Compared {compared} verses "
+               f"({missing_rahlfs} in the .tex had no Rahlfs entry to check against)")
+    out.append(f"Verses below similarity {args.threshold}: {len(results)}")
+    out.append("")
     for ratio, ref, tex_text, r_text in results:
-        print(f"--- {ref}  (similarity {ratio:.2f})")
-        print(f"  tex/Swete:  {tex_text}")
-        print(f"  Rahlfs:     {r_text}")
-        print()
+        out.append(f"--- {ref}  (similarity {ratio:.2f})")
+        out.append(f"  in .tex:    {tex_text}")
+        out.append(f"  Rahlfs:     {r_text}")
+        out.append("")
+    report = "\n".join(out)
+    print(report)
+    report_path = Path(args.texfile).with_name(Path(args.texfile).stem + '_check.txt')
+    report_path.write_text(report + "\n", encoding='utf-8')
+    print(f"(also written to {report_path})")
 
 
 if __name__ == '__main__':
